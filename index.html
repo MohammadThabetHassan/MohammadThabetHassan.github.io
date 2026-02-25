@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mohammad Thabet - Cybersecurity Specialist & Software Developer. Portfolio showcasing projects in security, AI, and mobile development.">
-  <meta name="keywords" content="Cybersecurity, Portfolio, Mohammad Thabet, Digital Forensics, Software Developer, Python, Java, Flutter">
+  <meta name="description" content="Mohammad Thabet - Cybersecurity Specialist, Ethical Hacker & Software Developer. Portfolio showcasing projects in security, AI, mobile dev, and DevOps.">
+  <meta name="keywords" content="Cybersecurity, Portfolio, Mohammad Thabet, Penetration Testing, Ethical Hacking, Python, Java, Flutter, AI, Dubai">
   <meta name="author" content="Mohammad Thabet">
   <meta name="theme-color" content="#0a0a0a">
+  <meta property="og:title" content="Mohammad Thabet - Cybersecurity & Software Portfolio">
+  <meta property="og:description" content="Cybersecurity student & aspiring ethical hacker building secure, user-focused software.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mohammadthabethassan.github.io">
   <title>Mohammad Thabet - Cybersecurity &amp; Software Portfolio</title>
 
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -16,795 +20,449 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    /* ===== RESET & BASE ===== */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    /* ===== RESET ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --color-bg: #0a0a0a;
-      --color-surface: #161616;
-      --color-card: #1e1e1e;
-      --color-border: #2a2a2a;
-      --color-accent: #33ff99;
-      --color-accent-hover: #2de088;
-      --color-text: #e4e4e4;
-      --color-text-muted: #a0a0a0;
-      --color-text-heading: #ffffff;
+      --bg: #0a0a0a;
+      --bg-surface: #111111;
+      --bg-card: #161616;
+      --bg-card-hover: #1a1a1a;
+      --border: #222222;
+      --border-hover: #333333;
+      --accent: #33ff99;
+      --accent-dim: rgba(51,255,153,0.08);
+      --accent-mid: rgba(51,255,153,0.15);
+      --accent-hover: #2de088;
+      --accent-glow: rgba(51,255,153,0.12);
+      --text: #e4e4e4;
+      --text-secondary: #a0a0a0;
+      --text-heading: #ffffff;
       --radius-sm: 8px;
       --radius-md: 12px;
-      --radius-lg: 16px;
-      --max-width: 1100px;
-      --nav-height: 64px;
+      --radius-lg: 20px;
+      --radius-full: 100px;
+      --max-w: 1120px;
+      --nav-h: 64px;
+      --transition: 0.2s ease;
     }
 
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: var(--nav-height);
-    }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 1rem); }
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background-color: var(--color-bg);
-      color: var(--color-text);
-      line-height: 1.6;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
     }
 
-    /* Scrollbar */
-    body::-webkit-scrollbar { width: 8px; }
-    body::-webkit-scrollbar-track { background: var(--color-bg); }
-    body::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 4px; }
-    body::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
+    body::-webkit-scrollbar { width: 6px; }
+    body::-webkit-scrollbar-track { background: var(--bg); }
+    body::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    body::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 
     img { max-width: 100%; height: auto; display: block; }
-    a { color: var(--color-accent); text-decoration: none; transition: color 0.2s; }
-    a:hover { color: var(--color-accent-hover); }
+    a { color: var(--accent); text-decoration: none; transition: color var(--transition); }
+    a:hover { color: var(--accent-hover); }
 
-    .container {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 1.5rem; }
 
     /* ===== NAVIGATION ===== */
     .nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: var(--nav-height);
-      background: rgba(10, 10, 10, 0.85);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--color-border);
+      position: fixed; top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: rgba(10,10,10,0.8);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
       z-index: 100;
-      display: flex;
-      align-items: center;
+      display: flex; align-items: center;
     }
-
     .nav__inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      width: 100%; max-width: var(--max-w); margin: 0 auto; padding: 0 1.5rem;
     }
-
-    .nav__logo {
-      font-weight: 700;
-      font-size: 1.125rem;
-      color: var(--color-text-heading);
-      letter-spacing: -0.02em;
-    }
-
-    .nav__logo span {
-      color: var(--color-accent);
-    }
-
-    .nav__links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
+    .nav__logo { font-weight: 800; font-size: 1.125rem; color: var(--text-heading); letter-spacing: -0.03em; }
+    .nav__logo span { color: var(--accent); }
+    .nav__links { display: flex; gap: 0.25rem; list-style: none; }
     .nav__links a {
-      color: var(--color-text-muted);
-      font-size: 0.875rem;
-      font-weight: 500;
-      transition: color 0.2s;
-      padding: 0.25rem 0;
-      position: relative;
+      color: var(--text-secondary); font-size: 0.8125rem; font-weight: 500;
+      padding: 0.375rem 0.75rem; border-radius: var(--radius-sm);
+      transition: all var(--transition); position: relative;
     }
-
-    .nav__links a:hover,
-    .nav__links a:focus {
-      color: var(--color-text-heading);
-    }
-
-    .nav__links a::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--color-accent);
-      transition: width 0.2s;
-    }
-
-    .nav__links a:hover::after,
-    .nav__links a:focus::after {
-      width: 100%;
-    }
-
-    /* Mobile hamburger */
+    .nav__links a:hover, .nav__links a:focus { color: var(--text-heading); background: var(--accent-dim); }
     .nav__toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0.5rem;
-      color: var(--color-text);
+      display: none; background: none; border: 1px solid var(--border);
+      border-radius: var(--radius-sm); cursor: pointer; padding: 0.5rem;
+      color: var(--text); transition: all var(--transition);
     }
-
-    .nav__toggle svg {
-      width: 24px;
-      height: 24px;
-      stroke: currentColor;
-      stroke-width: 2;
-      fill: none;
-    }
+    .nav__toggle:hover { border-color: var(--accent); color: var(--accent); }
+    .nav__toggle svg { width: 20px; height: 20px; stroke: currentColor; stroke-width: 2; fill: none; }
 
     /* ===== HERO ===== */
     .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 6rem 1.5rem 4rem;
-      position: relative;
-      overflow: hidden;
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 7rem 1.5rem 5rem;
+      position: relative; overflow: hidden;
     }
-
     .hero::before {
-      content: '';
-      position: absolute;
-      top: 20%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(51,255,153,0.06) 0%, transparent 70%);
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 40%, rgba(51,255,153,0.04) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 20% 80%, rgba(51,100,255,0.03) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 80% 20%, rgba(150,51,255,0.02) 0%, transparent 60%);
       pointer-events: none;
     }
-
-    .hero__content {
-      position: relative;
-      z-index: 1;
-      max-width: 680px;
+    /* Subtle grid background */
+    .hero::after {
+      content: ''; position: absolute; inset: 0;
+      background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 60px 60px;
+      opacity: 0.15; pointer-events: none;
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+      -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
     }
-
+    .hero__content { position: relative; z-index: 1; max-width: 720px; }
+    .hero__avatar {
+      width: 120px; height: 120px; border-radius: 50%;
+      border: 3px solid var(--accent); object-fit: cover;
+      margin: 0 auto 1.5rem; background: var(--bg-card);
+      box-shadow: 0 0 40px var(--accent-glow);
+    }
     .hero__label {
-      display: inline-block;
-      font-size: 0.8125rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--color-accent);
-      margin-bottom: 1.5rem;
-      padding: 0.375rem 1rem;
-      border: 1px solid rgba(51,255,153,0.2);
-      border-radius: 100px;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 1.25rem; padding: 0.375rem 1rem;
+      border: 1px solid rgba(51,255,153,0.15); border-radius: var(--radius-full);
+      background: var(--accent-dim);
     }
-
+    .hero__label-dot {
+      width: 6px; height: 6px; background: var(--accent);
+      border-radius: 50%; animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
     .hero__title {
-      font-size: clamp(2.5rem, 5vw, 3.75rem);
-      font-weight: 700;
-      color: var(--color-text-heading);
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      margin-bottom: 1.25rem;
+      font-size: clamp(2.75rem, 5.5vw, 4rem); font-weight: 800;
+      color: var(--text-heading); line-height: 1.05; letter-spacing: -0.04em;
+      margin-bottom: 1rem;
     }
-
     .hero__subtitle {
-      font-size: clamp(1.0625rem, 2vw, 1.25rem);
-      color: var(--color-text-muted);
-      max-width: 540px;
-      margin: 0 auto 2.5rem;
-      line-height: 1.7;
+      font-size: clamp(1rem, 1.8vw, 1.15rem); color: var(--text-secondary);
+      max-width: 520px; margin: 0 auto 2rem; line-height: 1.75;
     }
-
-    .hero__actions {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
+    .hero__actions { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+    .hero__social {
+      display: flex; gap: 0.75rem; justify-content: center; margin-top: 2rem;
+    }
+    .hero__social a {
+      width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+      border: 1px solid var(--border); border-radius: 50%; color: var(--text-secondary);
+      transition: all var(--transition);
+    }
+    .hero__social a:hover {
+      border-color: var(--accent); color: var(--accent); transform: translateY(-2px);
+      box-shadow: 0 4px 12px var(--accent-glow);
     }
 
     /* ===== BUTTONS ===== */
     .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.75rem;
-      border-radius: var(--radius-sm);
-      font-size: 0.9375rem;
-      font-weight: 600;
-      transition: all 0.2s;
-      border: none;
-      cursor: pointer;
-      font-family: inherit;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.75rem 1.75rem; border-radius: var(--radius-sm);
+      font-size: 0.875rem; font-weight: 600; transition: all var(--transition);
+      border: none; cursor: pointer; font-family: inherit;
     }
-
-    .btn--primary {
-      background: var(--color-accent);
-      color: #0a0a0a;
-    }
-
+    .btn--primary { background: var(--accent); color: #0a0a0a; }
     .btn--primary:hover {
-      background: var(--color-accent-hover);
-      color: #0a0a0a;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 16px rgba(51,255,153,0.2);
+      background: var(--accent-hover); color: #0a0a0a;
+      transform: translateY(-1px); box-shadow: 0 4px 20px var(--accent-glow);
     }
-
-    .btn--outline {
-      background: transparent;
-      color: var(--color-text);
-      border: 1px solid var(--color-border);
+    .btn--outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
+    .btn--outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+    .btn--sm { padding: 0.5rem 1rem; font-size: 0.8125rem; }
+    .btn--ghost {
+      background: transparent; color: var(--text-secondary); border: none;
+      padding: 0.5rem 0.75rem; font-size: 0.8125rem;
     }
-
-    .btn--outline:hover {
-      border-color: var(--color-accent);
-      color: var(--color-accent);
-      transform: translateY(-1px);
-    }
-
-    .btn--sm {
-      padding: 0.5rem 1rem;
-      font-size: 0.8125rem;
-    }
+    .btn--ghost:hover { color: var(--accent); }
 
     /* ===== SECTIONS ===== */
-    .section {
-      padding: 5rem 0;
-    }
-
-    .section__header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
+    .section { padding: 5rem 0; }
+    .section--alt { background: var(--bg-surface); }
+    .section__header { text-align: center; margin-bottom: 3rem; }
     .section__title {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--color-text-heading);
-      letter-spacing: -0.02em;
-      margin-bottom: 0.75rem;
+      font-size: 1.75rem; font-weight: 700; color: var(--text-heading);
+      letter-spacing: -0.02em; margin-bottom: 0.75rem;
     }
-
-    .section__subtitle {
-      font-size: 1rem;
-      color: var(--color-text-muted);
-      max-width: 560px;
-      margin: 0 auto;
-    }
-
-    /* Divider line under heading */
     .section__title::after {
-      content: '';
-      display: block;
-      width: 48px;
-      height: 3px;
-      background: var(--color-accent);
-      margin: 0.75rem auto 0;
-      border-radius: 2px;
+      content: ''; display: block; width: 40px; height: 3px;
+      background: var(--accent); margin: 0.75rem auto 0; border-radius: 2px;
     }
+    .section__subtitle { font-size: 0.9375rem; color: var(--text-secondary); max-width: 520px; margin: 0 auto; }
 
     /* ===== ABOUT ===== */
-    .about__content {
-      max-width: 720px;
-      margin: 0 auto;
-      text-align: center;
+    .about__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+    .about__photo-wrap {
+      position: relative; border-radius: var(--radius-lg); overflow: hidden;
+      border: 1px solid var(--border); aspect-ratio: 4/5;
     }
-
-    .about__text {
-      font-size: 1.0625rem;
-      line-height: 1.8;
-      color: var(--color-text);
+    .about__photo {
+      width: 100%; height: 100%; object-fit: cover; background: var(--bg-card);
     }
-
-    .about__highlights {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-top: 2.5rem;
+    .about__photo-badge {
+      position: absolute; bottom: 1rem; left: 1rem;
+      background: rgba(10,10,10,0.85); backdrop-filter: blur(8px);
+      padding: 0.5rem 1rem; border-radius: var(--radius-sm);
+      font-size: 0.75rem; font-weight: 600; color: var(--accent);
+      border: 1px solid var(--border);
     }
-
+    .about__text-wrap { display: flex; flex-direction: column; gap: 1.5rem; }
+    .about__text { font-size: 0.9375rem; line-height: 1.8; color: var(--text); }
+    .about__stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
     .about__stat {
-      padding: 1.5rem;
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-md);
-      text-align: center;
+      padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-md); text-align: center; transition: all var(--transition);
     }
+    .about__stat:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .about__stat-value { font-size: 1.5rem; font-weight: 800; color: var(--accent); display: block; }
+    .about__stat-label { font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem; display: block; }
 
-    .about__stat-value {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--color-accent);
-      display: block;
+    /* ===== ACHIEVEMENTS ===== */
+    .achievements__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+    .achievement-card {
+      padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-md); display: flex; gap: 1rem; align-items: flex-start;
+      transition: all var(--transition);
     }
-
-    .about__stat-label {
-      font-size: 0.8125rem;
-      color: var(--color-text-muted);
-      margin-top: 0.25rem;
-      display: block;
+    .achievement-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .achievement-card__icon {
+      width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
+      background: var(--accent-dim); border-radius: var(--radius-sm); flex-shrink: 0;
     }
+    .achievement-card__icon--gold { background: rgba(255,215,0,0.1); color: #ffd700; }
+    .achievement-card__icon--silver { background: rgba(192,192,192,0.1); color: #c0c0c0; }
+    .achievement-card__icon--flag { background: rgba(100,149,237,0.1); color: #6495ed; }
+    .achievement-card__title { font-size: 0.875rem; font-weight: 600; color: var(--text-heading); margin-bottom: 0.25rem; }
+    .achievement-card__desc { font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.5; }
 
     /* ===== SKILLS ===== */
-    .skills__grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 1rem;
+    .skills__categories { display: flex; flex-direction: column; gap: 2rem; }
+    .skills__category-title {
+      font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--text-secondary); margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);
     }
-
-    .skill-card {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 1rem 1.25rem;
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-md);
-      transition: border-color 0.2s, transform 0.2s;
+    .skills__row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .skill-tag {
+      display: inline-flex; align-items: center; gap: 0.375rem;
+      padding: 0.5rem 0.875rem; background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-full); font-size: 0.8125rem; font-weight: 500;
+      color: var(--text); transition: all var(--transition);
     }
-
-    .skill-card:hover {
-      border-color: var(--color-accent);
-      transform: translateY(-2px);
-    }
-
-    .skill-card__icon {
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(51,255,153,0.08);
-      border-radius: var(--radius-sm);
-      flex-shrink: 0;
-      font-size: 1.25rem;
-    }
-
-    .skill-card__info h3 {
-      font-size: 0.9375rem;
-      font-weight: 600;
-      color: var(--color-text-heading);
-    }
-
-    .skill-card__info p {
-      font-size: 0.8125rem;
-      color: var(--color-text-muted);
-      margin-top: 0.125rem;
-    }
+    .skill-tag:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+    .skill-tag svg { width: 14px; height: 14px; }
 
     /* ===== PROJECTS ===== */
-    .projects__grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
+    .projects__filter {
+      display: flex; justify-content: center; gap: 0.375rem; flex-wrap: wrap; margin-bottom: 2rem;
     }
-
+    .filter-btn {
+      padding: 0.375rem 1rem; background: transparent; border: 1px solid var(--border);
+      border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 600;
+      color: var(--text-secondary); cursor: pointer; font-family: inherit;
+      transition: all var(--transition); text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .filter-btn.active { background: var(--accent); color: #0a0a0a; border-color: var(--accent); }
+    .projects__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
     .project-card {
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
-      display: flex;
-      flex-direction: column;
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md);
+      overflow: hidden; transition: all var(--transition); display: flex; flex-direction: column;
     }
-
-    .project-card:hover {
-      border-color: var(--color-accent);
-      transform: translateY(-3px);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    .project-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+    .project-card.hidden { display: none; }
+    .project-card__header {
+      height: 160px; position: relative; overflow: hidden;
+      background: linear-gradient(135deg, var(--bg-surface) 0%, var(--bg-card) 100%);
+      display: flex; align-items: center; justify-content: center;
     }
-
-    .project-card__img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      background: var(--color-card);
+    .project-card__header-icon {
+      width: 48px; height: 48px; color: var(--accent); opacity: 0.6;
     }
-
-    /* Fallback placeholder when image fails to load */
-    .project-card__placeholder {
-      width: 100%;
-      height: 200px;
-      background: linear-gradient(135deg, var(--color-card) 0%, var(--color-surface) 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.5rem;
+    .project-card__header img {
+      width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;
     }
-
-    .project-card__body {
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
+    .project-card__category {
+      position: absolute; top: 0.75rem; right: 0.75rem;
+      font-size: 0.625rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.06em; padding: 0.25rem 0.5rem;
+      background: rgba(10,10,10,0.75); backdrop-filter: blur(4px);
+      color: var(--accent); border-radius: var(--radius-sm);
     }
-
-    .project-card__title {
-      font-size: 1.125rem;
-      font-weight: 600;
-      color: var(--color-text-heading);
-      margin-bottom: 0.5rem;
-    }
-
+    .project-card__body { padding: 1.25rem; display: flex; flex-direction: column; flex: 1; }
+    .project-card__title { font-size: 1rem; font-weight: 700; color: var(--text-heading); margin-bottom: 0.375rem; }
     .project-card__desc {
-      font-size: 0.875rem;
-      color: var(--color-text-muted);
-      line-height: 1.6;
-      margin-bottom: 1rem;
-      flex: 1;
+      font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.6;
+      margin-bottom: 0.875rem; flex: 1;
+      display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
     }
-
-    .project-card__tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.375rem;
-      margin-bottom: 1rem;
-    }
-
+    .project-card__tags { display: flex; flex-wrap: wrap; gap: 0.25rem; margin-bottom: 1rem; }
     .tag {
-      display: inline-block;
-      font-size: 0.6875rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      padding: 0.25rem 0.625rem;
-      background: rgba(51,255,153,0.08);
-      color: var(--color-accent);
-      border-radius: 100px;
-      text-transform: uppercase;
+      font-size: 0.625rem; font-weight: 700; letter-spacing: 0.04em;
+      padding: 0.2rem 0.5rem; background: var(--accent-dim); color: var(--accent);
+      border-radius: var(--radius-full); text-transform: uppercase;
     }
-
     .project-card__links {
-      display: flex;
-      gap: 0.75rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--color-border);
+      display: flex; gap: 0.75rem; padding-top: 0.875rem; border-top: 1px solid var(--border);
     }
-
     .project-card__links a {
-      font-size: 0.8125rem;
-      font-weight: 500;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.375rem;
+      font-size: 0.8125rem; font-weight: 500;
+      display: inline-flex; align-items: center; gap: 0.375rem;
     }
 
     /* ===== EDUCATION ===== */
-    .education__content {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
+    .education__content { max-width: 600px; margin: 0 auto; }
     .education__item {
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-md);
-      padding: 2rem;
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md);
+      padding: 2rem; text-align: center; position: relative; overflow: hidden;
     }
-
-    .education__degree {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--color-text-heading);
-      margin-bottom: 0.5rem;
+    .education__item::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 3px; background: linear-gradient(90deg, var(--accent), rgba(51,255,153,0.2));
     }
-
-    .education__school {
-      font-size: 1rem;
-      color: var(--color-accent);
-      margin-bottom: 0.25rem;
-    }
-
-    .education__year {
-      font-size: 0.875rem;
-      color: var(--color-text-muted);
-    }
+    .education__degree { font-size: 1.125rem; font-weight: 700; color: var(--text-heading); margin-bottom: 0.5rem; }
+    .education__school { font-size: 0.9375rem; color: var(--accent); margin-bottom: 0.25rem; }
+    .education__year { font-size: 0.8125rem; color: var(--text-secondary); }
 
     /* ===== CERTIFICATIONS ===== */
-    .certs__grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1rem;
+    .certs__badges {
+      display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;
+      margin-bottom: 2.5rem; padding: 1.5rem;
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md);
     }
-
-    .cert-card {
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-md);
-      padding: 1.25rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-
-    .cert-card:hover {
-      border-color: var(--color-accent);
-      transform: translateY(-2px);
-    }
-
-    .cert-card__badge {
-      width: 48px;
-      height: 48px;
-      border-radius: var(--radius-sm);
-      object-fit: cover;
-      flex-shrink: 0;
-      background: var(--color-card);
-    }
-
-    .cert-card__info {
-      flex: 1;
-      min-width: 0;
-    }
-
-    .cert-card__title {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--color-text-heading);
-      line-height: 1.4;
-      margin-bottom: 0.5rem;
-    }
-
-    .cert-card__link {
-      font-size: 0.8125rem;
-      font-weight: 500;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-    }
-
-    /* ===== CONTACT ===== */
-    .contact__content {
-      max-width: 560px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .contact__links {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 2.5rem;
-    }
-
-    .contact__link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-sm);
-      color: var(--color-text);
-      font-weight: 500;
-      font-size: 0.9375rem;
-      transition: all 0.2s;
-    }
-
-    .contact__link:hover {
-      border-color: var(--color-accent);
-      color: var(--color-accent);
-      transform: translateY(-2px);
-    }
-
-    .contact__form {
-      text-align: left;
-    }
-
-    .form-group {
-      margin-bottom: 1.25rem;
-    }
-
-    .form-group label {
-      display: block;
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--color-text);
+    .certs__badge-item { text-align: center; transition: transform var(--transition); }
+    .certs__badge-item:hover { transform: translateY(-3px); }
+    .certs__badge-item img {
+      width: 80px; height: 80px; border-radius: var(--radius-md);
       margin-bottom: 0.375rem;
     }
+    .certs__badge-item span { display: block; font-size: 0.6875rem; color: var(--text-secondary); max-width: 100px; }
 
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      background: var(--color-card);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-sm);
-      color: var(--color-text);
-      font-family: inherit;
-      font-size: 0.9375rem;
-      transition: border-color 0.2s;
+    .certs__grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 0.75rem;
     }
+    .cert-card {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md);
+      padding: 1rem 1.25rem; display: flex; align-items: center; gap: 0.875rem;
+      transition: all var(--transition);
+    }
+    .cert-card:hover { border-color: var(--accent); }
+    .cert-card__badge {
+      width: 40px; height: 40px; border-radius: var(--radius-sm);
+      object-fit: cover; flex-shrink: 0; background: var(--bg-surface);
+    }
+    .cert-card__info { flex: 1; min-width: 0; }
+    .cert-card__title {
+      font-size: 0.8125rem; font-weight: 600; color: var(--text-heading);
+      line-height: 1.35; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .cert-card__issuer { font-size: 0.6875rem; color: var(--text-secondary); margin-top: 0.125rem; }
+    .cert-card__link {
+      font-size: 0.75rem; font-weight: 600; flex-shrink: 0;
+      padding: 0.25rem 0.625rem; border: 1px solid var(--border); border-radius: var(--radius-full);
+      transition: all var(--transition); display: inline-flex; align-items: center; gap: 0.25rem;
+    }
+    .cert-card__link:hover { border-color: var(--accent); background: var(--accent-dim); }
 
-    .form-group input:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--color-accent);
+    /* ===== CONTACT ===== */
+    .contact__content { max-width: 560px; margin: 0 auto; text-align: center; }
+    .contact__links { display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .contact__link {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.625rem 1.25rem; background: var(--bg-card);
+      border: 1px solid var(--border); border-radius: var(--radius-sm);
+      color: var(--text); font-weight: 500; font-size: 0.875rem;
+      transition: all var(--transition);
     }
-
-    .form-group textarea {
-      resize: vertical;
-      min-height: 120px;
+    .contact__link:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+    .contact__form { text-align: left; }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; font-size: 0.8125rem; font-weight: 600; color: var(--text); margin-bottom: 0.375rem; }
+    .form-group input, .form-group textarea {
+      width: 100%; padding: 0.75rem 1rem; background: var(--bg-surface);
+      border: 1px solid var(--border); border-radius: var(--radius-sm);
+      color: var(--text); font-family: inherit; font-size: 0.875rem;
+      transition: border-color var(--transition);
     }
+    .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
 
     /* ===== FOOTER ===== */
     .footer {
-      border-top: 1px solid var(--color-border);
-      padding: 2rem 0;
-      text-align: center;
-      font-size: 0.8125rem;
-      color: var(--color-text-muted);
+      border-top: 1px solid var(--border); padding: 2rem 0;
+      text-align: center; font-size: 0.75rem; color: var(--text-secondary);
     }
+    .footer__links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; }
+    .footer__links a { font-size: 0.75rem; color: var(--text-secondary); }
+    .footer__links a:hover { color: var(--accent); }
 
-    /* ===== ICONS (inline SVG helpers) ===== */
-    .icon {
-      width: 16px;
-      height: 16px;
-      display: inline-block;
-      vertical-align: middle;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .icon--lg {
-      width: 20px;
-      height: 20px;
-    }
+    /* ===== ICONS ===== */
+    .icon { width: 16px; height: 16px; display: inline-block; vertical-align: middle; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .icon--lg { width: 20px; height: 20px; }
+    .icon--xl { width: 24px; height: 24px; }
 
     /* ===== MOBILE ===== */
     @media (max-width: 768px) {
       .nav__links {
-        display: none;
-        position: fixed;
-        top: var(--nav-height);
-        left: 0;
-        right: 0;
-        background: rgba(10, 10, 10, 0.98);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        flex-direction: column;
-        padding: 1.5rem;
-        gap: 0;
-        border-bottom: 1px solid var(--color-border);
+        display: none; position: fixed; top: var(--nav-h); left: 0; right: 0;
+        background: rgba(10,10,10,0.98); backdrop-filter: blur(16px);
+        flex-direction: column; padding: 1rem; gap: 0;
+        border-bottom: 1px solid var(--border);
       }
-
-      .nav__links.open {
-        display: flex;
-      }
-
-      .nav__links li {
-        border-bottom: 1px solid var(--color-border);
-      }
-
-      .nav__links li:last-child {
-        border-bottom: none;
-      }
-
-      .nav__links a {
-        display: block;
-        padding: 1rem 0;
-        font-size: 1rem;
-      }
-
-      .nav__links a::after {
-        display: none;
-      }
-
-      .nav__toggle {
-        display: block;
-      }
-
-      .projects__grid {
-        grid-template-columns: 1fr;
-      }
-
-      .about__highlights {
-        grid-template-columns: 1fr;
-      }
-
-      .section {
-        padding: 3.5rem 0;
-      }
-
-      .hero {
-        padding: 5rem 1.5rem 3rem;
-        min-height: auto;
-      }
-
-      .hero__actions {
-        flex-direction: column;
-        align-items: center;
-      }
+      .nav__links.open { display: flex; }
+      .nav__links li { border-bottom: 1px solid var(--border); }
+      .nav__links li:last-child { border-bottom: none; }
+      .nav__links a { display: block; padding: 0.875rem 0; font-size: 0.9375rem; border-radius: 0; }
+      .nav__toggle { display: flex; align-items: center; justify-content: center; }
+      .projects__grid { grid-template-columns: 1fr; }
+      .about__grid { grid-template-columns: 1fr; gap: 2rem; }
+      .about__photo-wrap { max-width: 300px; margin: 0 auto; }
+      .about__stats { grid-template-columns: repeat(3, 1fr); }
+      .section { padding: 3.5rem 0; }
+      .hero { padding: 5.5rem 1.5rem 3rem; min-height: auto; }
+      .hero__actions { flex-direction: column; align-items: center; }
+      .hero__avatar { width: 100px; height: 100px; }
     }
-
     @media (max-width: 480px) {
-      .skills__grid {
-        grid-template-columns: 1fr;
-      }
-
-      .certs__grid {
-        grid-template-columns: 1fr;
-      }
-
-      .contact__links {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .contact__link {
-        justify-content: center;
-      }
+      .certs__grid { grid-template-columns: 1fr; }
+      .contact__links { flex-direction: column; align-items: stretch; }
+      .contact__link { justify-content: center; }
+      .achievements__grid { grid-template-columns: 1fr; }
+      .projects__filter { gap: 0.25rem; }
+      .filter-btn { padding: 0.3rem 0.75rem; font-size: 0.6875rem; }
     }
 
-    /* ===== REDUCED MOTION ===== */
+    /* ===== A11Y ===== */
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .project-card, .skill-card, .cert-card, .contact__link, .btn {
-        transition: none;
-      }
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
     }
-
-    /* ===== FOCUS VISIBLE ===== */
-    :focus-visible {
-      outline: 2px solid var(--color-accent);
-      outline-offset: 2px;
-    }
-
-    /* Skip link for accessibility */
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
     .skip-link {
-      position: absolute;
-      top: -100%;
-      left: 1rem;
-      padding: 0.75rem 1.5rem;
-      background: var(--color-accent);
-      color: #0a0a0a;
-      font-weight: 600;
-      border-radius: var(--radius-sm);
-      z-index: 200;
-      transition: top 0.2s;
+      position: absolute; top: -100%; left: 1rem; padding: 0.75rem 1.5rem;
+      background: var(--accent); color: #0a0a0a; font-weight: 600;
+      border-radius: var(--radius-sm); z-index: 200; transition: top 0.2s;
     }
-
-    .skip-link:focus {
-      top: 0.75rem;
-    }
+    .skip-link:focus { top: 0.75rem; }
   </style>
 </head>
 <body>
 
-<!-- Skip to content link for keyboard users -->
 <a href="#about" class="skip-link">Skip to content</a>
 
 <!-- ===== NAVIGATION ===== -->
@@ -812,17 +470,13 @@
   <div class="nav__inner">
     <a href="#" class="nav__logo" aria-label="Mohammad Thabet - Home">M<span>.</span>Thabet</a>
     <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" onclick="toggleNav()">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <line x1="3" y1="6" x2="21" y2="6"/>
-        <line x1="3" y1="12" x2="21" y2="12"/>
-        <line x1="3" y1="18" x2="21" y2="18"/>
-      </svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
     </button>
     <ul class="nav__links" id="navLinks" role="list">
       <li><a href="#about">About</a></li>
+      <li><a href="#achievements">Achievements</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
       <li><a href="#certifications">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -832,45 +486,128 @@
 <!-- ===== HERO ===== -->
 <header class="hero" id="hero">
   <div class="hero__content">
-    <span class="hero__label">Cybersecurity &amp; Software Engineering</span>
+    <img class="hero__avatar" src="img/img.jpg" alt="Mohammad Thabet" onerror="this.style.display='none'">
+    <div class="hero__label"><span class="hero__label-dot" aria-hidden="true"></span>Open to Internship Opportunities</div>
     <h1 class="hero__title">Mohammad Thabet</h1>
     <p class="hero__subtitle">
-      B.Sc. Cyber Security student building secure, user&#8209;focused software.
-      Passionate about penetration testing, AI, and mobile development.
+      Cybersecurity student &amp; aspiring ethical hacker at Canadian University Dubai.
+      Building secure software with Python, Java, Flutter &amp; AI.
     </p>
     <div class="hero__actions">
-      <a href="#projects" class="btn btn--primary">View Projects</a>
+      <a href="#projects" class="btn btn--primary">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        View Projects
+      </a>
       <a href="#contact" class="btn btn--outline">Get in Touch</a>
+      <a href="https://github.com/MohammadThabetHassan" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub
+      </a>
+    </div>
+    <div class="hero__social">
+      <a href="https://www.linkedin.com/in/mohammadthabet/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg class="icon--lg" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true" width="18" height="18"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="mailto:Mohammad_Thabet@hotmail.com" aria-label="Email">
+        <svg class="icon--lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" width="18" height="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+      <a href="https://github.com/MohammadThabetHassan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg class="icon--lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" width="18" height="18"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      </a>
     </div>
   </div>
 </header>
 
-<!-- ===== ABOUT ===== -->
 <main>
+
+<!-- ===== ABOUT ===== -->
 <section class="section" id="about" aria-labelledby="about-heading">
   <div class="container">
     <div class="section__header">
       <h2 class="section__title" id="about-heading">About Me</h2>
     </div>
-    <div class="about__content">
-      <p class="about__text">
-        I am a B.Sc. Cyber Security student at Canadian University Dubai, graduating in 2026.
-        With exposure to diverse cultures and teams, I bring critical thinking, strong communication,
-        and a hands-on approach to every project. I specialize in cybersecurity analysis, penetration testing,
-        and building practical tools with Python, Java, and Flutter.
-      </p>
-      <div class="about__highlights">
-        <div class="about__stat">
-          <span class="about__stat-value">4+</span>
-          <span class="about__stat-label">Projects shipped</span>
+    <div class="about__grid">
+      <div class="about__photo-wrap">
+        <img class="about__photo" src="img/img.jpg" alt="Mohammad Thabet at work" loading="lazy" onerror="this.parentElement.style.display='none'">
+        <span class="about__photo-badge">Dubai, UAE</span>
+      </div>
+      <div class="about__text-wrap">
+        <p class="about__text">
+          I'm a B.Sc. Cyber Security student at <strong>Canadian University Dubai</strong> (graduating 2026), passionate about protecting digital infrastructure and building tools that make security accessible.
+        </p>
+        <p class="about__text">
+          From winning <strong>1st place</strong> at CUD's coding competition to participating in <strong>CTF challenges</strong> and the <strong>Alibaba x RTA AI Hackathon</strong>, I thrive on applying classroom theory to real-world problems. I specialize in penetration testing, AI-driven security tools, and cross-platform mobile development.
+        </p>
+        <div class="about__stats">
+          <div class="about__stat">
+            <span class="about__stat-value">10+</span>
+            <span class="about__stat-label">Projects built</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-value">14</span>
+            <span class="about__stat-label">Certifications</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-value">3</span>
+            <span class="about__stat-label">Awards won</span>
+          </div>
         </div>
-        <div class="about__stat">
-          <span class="about__stat-value">11</span>
-          <span class="about__stat-label">Certifications</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ACHIEVEMENTS ===== -->
+<section class="section section--alt" id="achievements" aria-labelledby="achievements-heading">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title" id="achievements-heading">Achievements</h2>
+      <p class="section__subtitle">Competition wins, hackathons, and hands-on workshops</p>
+    </div>
+    <div class="achievements__grid">
+      <div class="achievement-card">
+        <div class="achievement-card__icon achievement-card__icon--gold" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
-        <div class="about__stat">
-          <span class="about__stat-value">2026</span>
-          <span class="about__stat-label">Expected graduation</span>
+        <div>
+          <p class="achievement-card__title">1st Place - Coding Competition</p>
+          <p class="achievement-card__desc">Initial Coding Competition at Canadian University Dubai</p>
+        </div>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-card__icon achievement-card__icon--silver" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+        </div>
+        <div>
+          <p class="achievement-card__title">2nd Place - Engineering Software</p>
+          <p class="achievement-card__desc">Junior &amp; Senior Students Category, Engineering Competition</p>
+        </div>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-card__icon achievement-card__icon--flag" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+        </div>
+        <div>
+          <p class="achievement-card__title">CTF Participant - Exploit3rs</p>
+          <p class="achievement-card__desc">Outstanding participant in Capture The Flag competition</p>
+        </div>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <div>
+          <p class="achievement-card__title">Alibaba x RTA AI Hackathon</p>
+          <p class="achievement-card__desc">Built a full-stack ML smart map for taxi drivers in Dubai</p>
+        </div>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <p class="achievement-card__title">Workshops Completed</p>
+          <p class="achievement-card__desc">Router Hacking &amp; Network Pentesting 101</p>
         </div>
       </div>
     </div>
@@ -882,79 +619,53 @@
   <div class="container">
     <div class="section__header">
       <h2 class="section__title" id="skills-heading">Skills</h2>
-      <p class="section__subtitle">Technical and interpersonal skills I bring to every project</p>
+      <p class="section__subtitle">Technical stack built through projects, certifications, and competitions</p>
     </div>
-    <div class="skills__grid">
-      <div class="skill-card">
-        <div class="skill-card__icon" aria-hidden="true">
-          <svg class="icon icon--lg" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-        </div>
-        <div class="skill-card__info">
-          <h3>Python</h3>
-          <p>Scripting, automation, AI/ML</p>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-card__icon" aria-hidden="true">
-          <svg class="icon icon--lg" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-        </div>
-        <div class="skill-card__info">
-          <h3>Flutter / Dart</h3>
-          <p>Cross-platform mobile apps</p>
+    <div class="skills__categories">
+      <div>
+        <p class="skills__category-title">Languages</p>
+        <div class="skills__row">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">Dart / Flutter</span>
+          <span class="skill-tag">C</span>
+          <span class="skill-tag">C++</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">HTML / CSS</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">Bash</span>
         </div>
       </div>
-      <div class="skill-card">
-        <div class="skill-card__icon" aria-hidden="true">
-          <svg class="icon icon--lg" viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M5 20V8l7-5 7 5v12"/><rect x="9" y="12" width="6" height="8"/></svg>
-        </div>
-        <div class="skill-card__info">
-          <h3>Java</h3>
-          <p>Desktop apps, browser automation</p>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-card__icon" aria-hidden="true">
-          <svg class="icon icon--lg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <div class="skill-card__info">
-          <h3>Cybersecurity Analysis</h3>
-          <p>Threat assessment &amp; SIEM tools</p>
+      <div>
+        <p class="skills__category-title">Security &amp; Networking</p>
+        <div class="skills__row">
+          <span class="skill-tag">Penetration Testing</span>
+          <span class="skill-tag">Vulnerability Scanning</span>
+          <span class="skill-tag">Network Pentesting</span>
+          <span class="skill-tag">Wireshark</span>
+          <span class="skill-tag">SIEM / Log Analysis</span>
+          <span class="skill-tag">OAuth / Token Abuse</span>
+          <span class="skill-tag">Azure AD Security</span>
+          <span class="skill-tag">CTF / Exploit Dev</span>
         </div>
       </div>
-      <div class="skill-card">
-        <div class="skill-card__icon" aria-hidden="true">
-          <svg class="icon icon--lg" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-        </div>
-        <div class="skill-card__info">
-          <h3>Network Security</h3>
-          <p>Firewall, IDS/IPS, Wireshark</p>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-card__icon" aria-hidden="true">
-          <svg class="icon icon--lg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-        </div>
-        <div class="skill-card__info">
-          <h3>Penetration Testing</h3>
-          <p>Vulnerability scanning &amp; exploits</p>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-card__icon" aria-hidden="true">
-          <svg class="icon icon--lg" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-        </div>
-        <div class="skill-card__info">
-          <h3>Fast Learner</h3>
-          <p>Quickly adapts to new tech stacks</p>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-card__icon" aria-hidden="true">
-          <svg class="icon icon--lg" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <div class="skill-card__info">
-          <h3>Teamwork</h3>
-          <p>Cross-cultural collaboration</p>
+      <div>
+        <p class="skills__category-title">Frameworks &amp; Tools</p>
+        <div class="skills__row">
+          <span class="skill-tag">Streamlit</span>
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">React.js</span>
+          <span class="skill-tag">Firebase</span>
+          <span class="skill-tag">Scikit-learn</span>
+          <span class="skill-tag">XGBoost</span>
+          <span class="skill-tag">Google GenAI</span>
+          <span class="skill-tag">LangChain</span>
+          <span class="skill-tag">Playwright</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Git / GitHub Actions</span>
+          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">Power BI</span>
+          <span class="skill-tag">Blender</span>
         </div>
       </div>
     </div>
@@ -962,121 +673,181 @@
 </section>
 
 <!-- ===== PROJECTS ===== -->
-<section class="section" id="projects" aria-labelledby="projects-heading">
+<section class="section section--alt" id="projects" aria-labelledby="projects-heading">
   <div class="container">
     <div class="section__header">
       <h2 class="section__title" id="projects-heading">Projects</h2>
-      <p class="section__subtitle">Selected work showcasing security tools, mobile apps, and AI</p>
+      <p class="section__subtitle">Security tools, AI systems, mobile apps, and more</p>
     </div>
-    <div class="projects__grid">
 
-      <!-- Project 1: Bot Automation -->
-      <article class="project-card">
-        <div class="project-card__placeholder" aria-hidden="true">
-          <svg class="icon" viewBox="0 0 24 24" width="40" height="40" stroke="#33ff99" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+    <div class="projects__filter" role="group" aria-label="Filter projects by category">
+      <button class="filter-btn active" data-filter="all" onclick="filterProjects('all')">All</button>
+      <button class="filter-btn" data-filter="security" onclick="filterProjects('security')">Security</button>
+      <button class="filter-btn" data-filter="ai" onclick="filterProjects('ai')">AI / ML</button>
+      <button class="filter-btn" data-filter="mobile" onclick="filterProjects('mobile')">Mobile</button>
+      <button class="filter-btn" data-filter="tools" onclick="filterProjects('tools')">Tools</button>
+    </div>
+
+    <div class="projects__grid" id="projectsGrid">
+
+      <!-- Voice Deepfake Detector -->
+      <article class="project-card" data-category="security ai">
+        <div class="project-card__header">
+          <svg class="project-card__header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+          <span class="project-card__category">Security + AI</span>
         </div>
         <div class="project-card__body">
-          <h3 class="project-card__title">Bot Automation with Java</h3>
-          <p class="project-card__desc">
-            Automated bots for platforms like Noon and AliExpress, leveraging Swing for GUI and Playwright for browser automation.
-          </p>
-          <div class="project-card__tags">
-            <span class="tag">Java</span>
-            <span class="tag">Swing</span>
-            <span class="tag">Playwright</span>
-            <span class="tag">Automation</span>
-          </div>
+          <h3 class="project-card__title">Voice Deepfake Vishing Detector</h3>
+          <p class="project-card__desc">Detects AI-generated deepfake audio through MFCC, jitter, and shimmer analysis with ML classifiers. Includes synthetic voice generation for research and VoIP integration for real-time call analysis.</p>
+          <div class="project-card__tags"><span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">Librosa</span><span class="tag">Docker</span><span class="tag">VoIP</span></div>
           <div class="project-card__links">
-            <a href="https://github.com/MohammadThabetHassan/Java-Automated-Bots" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              Source Code
-            </a>
+            <a href="https://github.com/MohammadThabetHassan/Voice-Deepfake-Vishing-Detector-Generator" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Source Code</a>
           </div>
         </div>
       </article>
 
-      <!-- Project 2: CU-Manger -->
-      <article class="project-card">
-        <img
-          class="project-card__img"
-          src="img/CU-Manger.jpg"
-          alt="CU-Manger app screenshot showing course timetable management interface"
-          loading="lazy"
-          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
-        >
-        <div class="project-card__placeholder" style="display:none;" aria-hidden="true">
-          <svg class="icon" viewBox="0 0 24 24" width="40" height="40" stroke="#33ff99" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+      <!-- Impactathon -->
+      <article class="project-card" data-category="security ai">
+        <div class="project-card__header">
+          <svg class="project-card__header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span class="project-card__category">Security</span>
         </div>
         <div class="project-card__body">
-          <h3 class="project-card__title">CU-Manger</h3>
-          <p class="project-card__desc">
-            Flutter mobile app for managing course timetables with scheduling, notifications, and per-course notes.
-          </p>
-          <div class="project-card__tags">
-            <span class="tag">Flutter</span>
-            <span class="tag">Dart</span>
-            <span class="tag">Mobile</span>
-          </div>
+          <h3 class="project-card__title">Unified Cybersecurity Suite</h3>
+          <p class="project-card__desc">All-in-one SOC dashboard with ML-based intrusion detection (IDS), phishing email scanner using VirusTotal + OCR, AWS CloudWatch honeypot analysis, threat intelligence feeds, and AI incident response.</p>
+          <div class="project-card__tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">XGBoost</span><span class="tag">AWS</span><span class="tag">VirusTotal</span></div>
           <div class="project-card__links">
-            <a href="https://github.com/MohammadThabetHassan/CUManger" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              Source Code
-            </a>
+            <a href="https://github.com/MohammadThabetHassan/Impactathon" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Source Code</a>
           </div>
         </div>
       </article>
 
-      <!-- Project 3: Hologram Glasses -->
-      <article class="project-card">
-        <div class="project-card__placeholder" aria-hidden="true">
-          <svg class="icon" viewBox="0 0 24 24" width="40" height="40" stroke="#33ff99" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+      <!-- TokenAbuse Azure -->
+      <article class="project-card" data-category="security">
+        <div class="project-card__header">
+          <svg class="project-card__header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span class="project-card__category">Security</span>
+        </div>
+        <div class="project-card__body">
+          <h3 class="project-card__title">TokenAbuse-Azure CTF</h3>
+          <p class="project-card__desc">CTF writeup demonstrating OAuth token extraction via Microsoft Graph API, SharePoint enumeration, and sensitive file exfiltration using TokenTacticsV2 and Device Code Authentication.</p>
+          <div class="project-card__tags"><span class="tag">Azure AD</span><span class="tag">Graph API</span><span class="tag">OAuth</span><span class="tag">SharePoint</span></div>
+          <div class="project-card__links">
+            <a href="https://github.com/MohammadThabetHassan/TokenAbuse-Azure" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Source Code</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Log Monitoring -->
+      <article class="project-card" data-category="security tools">
+        <div class="project-card__header">
+          <svg class="project-card__header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <span class="project-card__category">Security</span>
+        </div>
+        <div class="project-card__body">
+          <h3 class="project-card__title">Log Monitoring &amp; Alert System</h3>
+          <p class="project-card__desc">High-performance C-based log parser with Bash orchestration that detects failed logins, port scans, and error bursts in real time. Triggers email alerts with configurable thresholds and deduplication.</p>
+          <div class="project-card__tags"><span class="tag">C</span><span class="tag">Bash</span><span class="tag">SMTP</span><span class="tag">CI/CD</span></div>
+          <div class="project-card__links">
+            <a href="https://github.com/MohammadThabetHassan/Log-Monitoring-and-Alert-System" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Source Code</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Food Waste App -->
+      <article class="project-card" data-category="mobile ai">
+        <div class="project-card__header">
+          <svg class="project-card__header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          <span class="project-card__category">Mobile + AI</span>
+        </div>
+        <div class="project-card__body">
+          <h3 class="project-card__title">Food Waste Tracker App</h3>
+          <p class="project-card__desc">Flutter app that tracks food expiry dates via barcode scanning, locates nearby food banks on Google Maps, and uses Gemini AI to suggest recipes for soon-to-expire ingredients.</p>
+          <div class="project-card__tags"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Google Maps</span><span class="tag">Gemini AI</span></div>
+          <div class="project-card__links">
+            <a href="https://github.com/MohammadThabetHassan/foodwasteapp" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Source Code</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Hologram Glasses -->
+      <article class="project-card" data-category="mobile">
+        <div class="project-card__header">
+          <svg class="project-card__header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span class="project-card__category">Hardware</span>
         </div>
         <div class="project-card__body">
           <h3 class="project-card__title">Assistive Hologram Glasses</h3>
-          <p class="project-card__desc">
-            Holographic glasses using speech recognition and real-time text-to-hologram rendering to help individuals with hearing impairments.
-          </p>
-          <div class="project-card__tags">
-            <span class="tag">Hardware</span>
-            <span class="tag">Speech Recognition</span>
-            <span class="tag">Accessibility</span>
-          </div>
+          <p class="project-card__desc">Smart glasses that convert real-time speech to holographic text for hearing-impaired individuals, using speech recognition APIs and a Flutter control interface.</p>
+          <div class="project-card__tags"><span class="tag">Flutter</span><span class="tag">Speech API</span><span class="tag">Blender</span><span class="tag">Hardware</span></div>
           <div class="project-card__links">
-            <a href="https://github.com/MohammadThabetHassan/Assistive-Hologram-Projecting-Glasses-for-Individuals-with-Hearing-Impairments" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              Source Code
-            </a>
+            <a href="https://github.com/MohammadThabetHassan/Assistive-Hologram-Projecting-Glasses-for-Individuals-with-Hearing-Impairments" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Source Code</a>
           </div>
         </div>
       </article>
 
-      <!-- Project 4: Python AI -->
-      <article class="project-card">
-        <img
-          class="project-card__img"
-          src="img/mohammadAIimg.JPG"
-          alt="AI chatbot interface for answering questions from PDF documents"
-          loading="lazy"
-          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
-        >
-        <div class="project-card__placeholder" style="display:none;" aria-hidden="true">
-          <svg class="icon" viewBox="0 0 24 24" width="40" height="40" stroke="#33ff99" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      <!-- AI PDF Chatbot -->
+      <article class="project-card" data-category="ai">
+        <div class="project-card__header">
+          <img src="img/mohammadAIimg.JPG" alt="AI Chatbot interface" loading="lazy" onerror="this.style.display='none'">
+          <svg class="project-card__header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span class="project-card__category">AI / ML</span>
         </div>
         <div class="project-card__body">
           <h3 class="project-card__title">AI PDF Chatbot</h3>
-          <p class="project-card__desc">
-            AI-powered chatbot built with Streamlit, PyPDF2, and Google GenerativeAI that answers questions from uploaded PDF files.
-          </p>
-          <div class="project-card__tags">
-            <span class="tag">Python</span>
-            <span class="tag">Streamlit</span>
-            <span class="tag">GenAI</span>
-          </div>
+          <p class="project-card__desc">Upload any PDF and query its contents through an AI-powered conversational interface. Built with Google Generative AI, LangChain, and Streamlit for instant document Q&amp;A.</p>
+          <div class="project-card__tags"><span class="tag">Python</span><span class="tag">GenAI</span><span class="tag">LangChain</span><span class="tag">Streamlit</span></div>
           <div class="project-card__links">
-            <a href="https://github.com/MohammadThabetHassan/Mohammad_AI" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              Source Code
-            </a>
+            <a href="https://github.com/MohammadThabetHassan/Mohammad_AI" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Source Code</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- CU-Manger -->
+      <article class="project-card" data-category="mobile">
+        <div class="project-card__header">
+          <img src="img/CU-Manger.jpg" alt="CU-Manger timetable app" loading="lazy" onerror="this.style.display='none'">
+          <svg class="project-card__header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span class="project-card__category">Mobile</span>
+        </div>
+        <div class="project-card__body">
+          <h3 class="project-card__title">CU-Manger</h3>
+          <p class="project-card__desc">University course timetable manager with filtering by instructor/day, CRUD operations, class reminder notifications, and per-course notes.</p>
+          <div class="project-card__tags"><span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Android</span><span class="tag">iOS</span></div>
+          <div class="project-card__links">
+            <a href="https://github.com/MohammadThabetHassan/CUManger" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Source Code</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Java Bots -->
+      <article class="project-card" data-category="tools">
+        <div class="project-card__header">
+          <svg class="project-card__header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <span class="project-card__category">Tools</span>
+        </div>
+        <div class="project-card__body">
+          <h3 class="project-card__title">E-Commerce Bot Automation</h3>
+          <p class="project-card__desc">Java desktop bots that automate product searches on Noon and AliExpress with Playwright browser automation, sending results via email or WhatsApp.</p>
+          <div class="project-card__tags"><span class="tag">Java</span><span class="tag">Playwright</span><span class="tag">Swing</span><span class="tag">Email</span></div>
+          <div class="project-card__links">
+            <a href="https://github.com/MohammadThabetHassan/Java-Automated-Bots" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Source Code</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PDF Organizer -->
+      <article class="project-card" data-category="tools">
+        <div class="project-card__header">
+          <svg class="project-card__header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          <span class="project-card__category">DevOps</span>
+        </div>
+        <div class="project-card__body">
+          <h3 class="project-card__title">PDF File Organizer</h3>
+          <p class="project-card__desc">Multi-threaded Bash tool that categorizes PDFs into academic directories (Programming, AI, Math, Security). Packaged as a .deb for Kali Linux with CI/CD via GitHub Actions.</p>
+          <div class="project-card__tags"><span class="tag">Bash</span><span class="tag">Make</span><span class="tag">dpkg</span><span class="tag">GitHub Actions</span></div>
+          <div class="project-card__links">
+            <a href="https://github.com/MohammadThabetHassan/organize-pdfs" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Source Code</a>
           </div>
         </div>
       </article>
@@ -1095,142 +866,125 @@
       <div class="education__item">
         <p class="education__degree">B.Sc. in Cyber Security</p>
         <p class="education__school">Canadian University Dubai</p>
-        <p class="education__year">Expected 2026</p>
+        <p class="education__year">2022 - 2026 (Expected)</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ===== CERTIFICATIONS ===== -->
-<section class="section" id="certifications" aria-labelledby="certs-heading">
+<section class="section section--alt" id="certifications" aria-labelledby="certs-heading">
   <div class="container">
     <div class="section__header">
-      <h2 class="section__title" id="certs-heading">Certifications</h2>
-      <p class="section__subtitle">Professional certifications from Google, Meta, Cisco, and more</p>
+      <h2 class="section__title" id="certs-heading">Certifications &amp; Badges</h2>
+      <p class="section__subtitle">Professional certifications from Google, Meta, Cisco, AWS, and more</p>
     </div>
-    <div class="certs__grid">
 
+    <!-- Credly Badges -->
+    <div class="certs__badges">
+      <a class="certs__badge-item" href="https://www.credly.com/badges/4c1c7cb6-0ac1-4a05-b4a6-1b24473ca384/public_url" target="_blank" rel="noopener noreferrer">
+        <img src="https://images.credly.com/size/340x340/images/024d0122-724d-4c5a-bd83-cfe3c4b7a073/image.png" alt="GitHub Foundations badge" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2280%22 height=%2280%22><rect fill=%22%23161616%22 width=%2280%22 height=%2280%22 rx=%2212%22/></svg>'">
+        <span>GitHub Foundations</span>
+      </a>
+      <a class="certs__badge-item" href="https://www.credly.com/badges/bc8a3f43-167d-4d01-8977-6726233959a8/public_url" target="_blank" rel="noopener noreferrer">
+        <img src="https://images.credly.com/size/340x340/images/f2f9716d-7be0-47ef-b4ad-c8df2d708b00/image.png" alt="OPSWAT ICIP badge" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2280%22 height=%2280%22><rect fill=%22%23161616%22 width=%2280%22 height=%2280%22 rx=%2212%22/></svg>'">
+        <span>OPSWAT ICIP</span>
+      </a>
+      <a class="certs__badge-item" href="https://www.credly.com/badges/0081edcf-1f16-4a5e-8228-80f3ebbc1ec4/public_url" target="_blank" rel="noopener noreferrer">
+        <img src="https://images.credly.com/size/340x340/images/73e4a58b-a8ef-41a3-a7db-9183dd269882/image.png" alt="AWS Cloud 101 badge" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2280%22 height=%2280%22><rect fill=%22%23161616%22 width=%2280%22 height=%2280%22 rx=%2212%22/></svg>'">
+        <span>AWS Cloud 101</span>
+      </a>
+    </div>
+
+    <div class="certs__grid">
       <div class="cert-card">
-        <img class="cert-card__badge" src="img/cert7.jpg" alt="Google Cybersecurity certificate badge" loading="lazy" onerror="this.style.display='none'">
+        <img class="cert-card__badge" src="img/cert7.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
         <div class="cert-card__info">
           <p class="cert-card__title">Google Cybersecurity Professional Certificate</p>
-          <a class="cert-card__link" href="https://www.coursera.org/account/accomplishments/professional-cert/2A2DCLQHM86N" target="_blank" rel="noopener noreferrer">
-            Verify
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
+          <p class="cert-card__issuer">Google</p>
         </div>
+        <a class="cert-card__link" href="https://www.coursera.org/account/accomplishments/professional-cert/2A2DCLQHM86N" target="_blank" rel="noopener noreferrer">Verify</a>
       </div>
-
       <div class="cert-card">
-        <img class="cert-card__badge" src="img/cert1.jpg" alt="Google Technical Support certificate badge" loading="lazy" onerror="this.style.display='none'">
+        <img class="cert-card__badge" src="img/cert1.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
         <div class="cert-card__info">
-          <p class="cert-card__title">Technical Support Fundamentals (Google)</p>
-          <a class="cert-card__link" href="https://www.coursera.org/account/accomplishments/verify/WFVKJ58L2J3F" target="_blank" rel="noopener noreferrer">
-            Verify
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
+          <p class="cert-card__title">Technical Support Fundamentals</p>
+          <p class="cert-card__issuer">Google</p>
         </div>
+        <a class="cert-card__link" href="https://www.coursera.org/account/accomplishments/verify/WFVKJ58L2J3F" target="_blank" rel="noopener noreferrer">Verify</a>
       </div>
-
       <div class="cert-card">
-        <img class="cert-card__badge" src="img/cert2.jpg" alt="Meta Android Development certificate badge" loading="lazy" onerror="this.style.display='none'">
+        <img class="cert-card__badge" src="img/cert2.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
         <div class="cert-card__info">
-          <p class="cert-card__title">Intro to Android Mobile App Development (Meta)</p>
-          <a class="cert-card__link" href="https://www.coursera.org/account/accomplishments/verify/QXNKHJXJCYQN" target="_blank" rel="noopener noreferrer">
-            Verify
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
+          <p class="cert-card__title">Intro to Android Mobile App Development</p>
+          <p class="cert-card__issuer">Meta</p>
         </div>
+        <a class="cert-card__link" href="https://www.coursera.org/account/accomplishments/verify/QXNKHJXJCYQN" target="_blank" rel="noopener noreferrer">Verify</a>
       </div>
-
       <div class="cert-card">
-        <img class="cert-card__badge" src="img/cert3.jpg" alt="Google UX Design certificate badge" loading="lazy" onerror="this.style.display='none'">
+        <img class="cert-card__badge" src="img/cert3.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
         <div class="cert-card__info">
-          <p class="cert-card__title">UX Design Foundations (Google)</p>
-          <a class="cert-card__link" href="https://www.coursera.org/account/accomplishments/verify/9MYE7E6GYT2N" target="_blank" rel="noopener noreferrer">
-            Verify
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
+          <p class="cert-card__title">UX Design Foundations</p>
+          <p class="cert-card__issuer">Google</p>
         </div>
+        <a class="cert-card__link" href="https://www.coursera.org/account/accomplishments/verify/9MYE7E6GYT2N" target="_blank" rel="noopener noreferrer">Verify</a>
       </div>
-
       <div class="cert-card">
-        <img class="cert-card__badge" src="img/cert4.jpg" alt="Google Python certificate badge" loading="lazy" onerror="this.style.display='none'">
+        <img class="cert-card__badge" src="img/cert4.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
         <div class="cert-card__info">
-          <p class="cert-card__title">Crash Course on Python (Google)</p>
-          <a class="cert-card__link" href="https://www.coursera.org/account/accomplishments/verify/6KBS9M2RM7DW" target="_blank" rel="noopener noreferrer">
-            Verify
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
+          <p class="cert-card__title">Crash Course on Python</p>
+          <p class="cert-card__issuer">Google</p>
         </div>
+        <a class="cert-card__link" href="https://www.coursera.org/account/accomplishments/verify/6KBS9M2RM7DW" target="_blank" rel="noopener noreferrer">Verify</a>
       </div>
-
       <div class="cert-card">
-        <img class="cert-card__badge" src="img/cert5.jpg" alt="University of Pennsylvania Java certificate badge" loading="lazy" onerror="this.style.display='none'">
+        <img class="cert-card__badge" src="img/cert5.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
         <div class="cert-card__info">
-          <p class="cert-card__title">Intro to Java &amp; OOP (U. of Pennsylvania)</p>
-          <a class="cert-card__link" href="https://www.coursera.org/account/accomplishments/verify/EGEAL2483HMK" target="_blank" rel="noopener noreferrer">
-            Verify
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
+          <p class="cert-card__title">Intro to Java &amp; OOP</p>
+          <p class="cert-card__issuer">U. of Pennsylvania</p>
         </div>
+        <a class="cert-card__link" href="https://www.coursera.org/account/accomplishments/verify/EGEAL2483HMK" target="_blank" rel="noopener noreferrer">Verify</a>
       </div>
-
       <div class="cert-card">
-        <img class="cert-card__badge" src="img/cert6.jpg" alt="University of London web development certificate badge" loading="lazy" onerror="this.style.display='none'">
+        <img class="cert-card__badge" src="img/cert6.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
         <div class="cert-card__info">
-          <p class="cert-card__title">HTML, CSS &amp; JavaScript (U. of London)</p>
-          <a class="cert-card__link" href="https://www.coursera.org/account/accomplishments/verify/7F7LGMUVY9Z9" target="_blank" rel="noopener noreferrer">
-            Verify
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
+          <p class="cert-card__title">HTML, CSS &amp; JavaScript</p>
+          <p class="cert-card__issuer">U. of London</p>
         </div>
+        <a class="cert-card__link" href="https://www.coursera.org/account/accomplishments/verify/7F7LGMUVY9Z9" target="_blank" rel="noopener noreferrer">Verify</a>
       </div>
-
       <div class="cert-card">
-        <img class="cert-card__badge" src="img/cert8.jpg" alt="Udacity Data Analysis certificate badge" loading="lazy" onerror="this.style.display='none'">
+        <img class="cert-card__badge" src="img/cert8.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
         <div class="cert-card__info">
-          <p class="cert-card__title">Data Analysis Fundamentals (Udacity)</p>
-          <a class="cert-card__link" href="https://s3-us-west-2.amazonaws.com/udacity-printer/production/certificates/f95e1395-d556-4bfc-b763-7540729f0ab9.pdf" target="_blank" rel="noopener noreferrer">
-            Verify
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
+          <p class="cert-card__title">Data Analysis Fundamentals</p>
+          <p class="cert-card__issuer">Udacity</p>
         </div>
+        <a class="cert-card__link" href="https://s3-us-west-2.amazonaws.com/udacity-printer/production/certificates/f95e1395-d556-4bfc-b763-7540729f0ab9.pdf" target="_blank" rel="noopener noreferrer">Verify</a>
       </div>
-
       <div class="cert-card">
-        <img class="cert-card__badge" src="img/cert9.jpg" alt="Udacity Power BI certificate badge" loading="lazy" onerror="this.style.display='none'">
+        <img class="cert-card__badge" src="img/cert9.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
         <div class="cert-card__info">
-          <p class="cert-card__title">Data Analysis &amp; Visualization with Power BI (Udacity)</p>
-          <a class="cert-card__link" href="https://www.udacity.com/certificate/e/11f16326-4c8c-11ee-901e-ef36537b847b" target="_blank" rel="noopener noreferrer">
-            Verify
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
+          <p class="cert-card__title">Data Analysis &amp; Visualization with Power BI</p>
+          <p class="cert-card__issuer">Udacity</p>
         </div>
+        <a class="cert-card__link" href="https://www.udacity.com/certificate/e/11f16326-4c8c-11ee-901e-ef36537b847b" target="_blank" rel="noopener noreferrer">Verify</a>
       </div>
-
       <div class="cert-card">
-        <img class="cert-card__badge" src="img/cert10.jpg" alt="Cisco Networks certificate badge" loading="lazy" onerror="this.style.display='none'">
+        <img class="cert-card__badge" src="img/cert10.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
         <div class="cert-card__info">
           <p class="cert-card__title">Intro to Networks &amp; Cisco Devices</p>
-          <a class="cert-card__link" href="https://www.coursera.org/account/accomplishments/verify/BBRN5D4AU8BN" target="_blank" rel="noopener noreferrer">
-            Verify
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
+          <p class="cert-card__issuer">Cisco / Coursera</p>
         </div>
+        <a class="cert-card__link" href="https://www.coursera.org/account/accomplishments/verify/BBRN5D4AU8BN" target="_blank" rel="noopener noreferrer">Verify</a>
       </div>
-
       <div class="cert-card">
-        <img class="cert-card__badge" src="img/cert11.jpg" alt="UC San Diego Data Structures certificate badge" loading="lazy" onerror="this.style.display='none'">
+        <img class="cert-card__badge" src="img/cert11.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
         <div class="cert-card__info">
-          <p class="cert-card__title">Data Structures (UC San Diego)</p>
-          <a class="cert-card__link" href="https://coursera.org/verify/8KNDAUQFXLQL" target="_blank" rel="noopener noreferrer">
-            Verify
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
+          <p class="cert-card__title">Data Structures</p>
+          <p class="cert-card__issuer">UC San Diego</p>
         </div>
+        <a class="cert-card__link" href="https://coursera.org/verify/8KNDAUQFXLQL" target="_blank" rel="noopener noreferrer">Verify</a>
       </div>
-
     </div>
   </div>
 </section>
@@ -1239,8 +993,8 @@
 <section class="section" id="contact" aria-labelledby="contact-heading">
   <div class="container">
     <div class="section__header">
-      <h2 class="section__title" id="contact-heading">Contact</h2>
-      <p class="section__subtitle">Interested in working together? Reach out through any channel below.</p>
+      <h2 class="section__title" id="contact-heading">Get in Touch</h2>
+      <p class="section__subtitle">Looking for an internship or collaboration opportunity. Let's connect.</p>
     </div>
     <div class="contact__content">
       <div class="contact__links">
@@ -1249,12 +1003,16 @@
           Email
         </a>
         <a class="contact__link" href="https://www.linkedin.com/in/mohammadthabet/" target="_blank" rel="noopener noreferrer">
-          <svg class="icon icon--lg" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <svg class="icon icon--lg" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           LinkedIn
         </a>
         <a class="contact__link" href="https://github.com/MohammadThabetHassan" target="_blank" rel="noopener noreferrer">
           <svg class="icon icon--lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
           GitHub
+        </a>
+        <a class="contact__link" href="tel:+971585208893">
+          <svg class="icon icon--lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Phone
         </a>
       </div>
       <form class="contact__form" action="https://formspree.io/f/mgvwekja" method="POST" aria-label="Contact form">
@@ -1268,51 +1026,63 @@
         </div>
         <div class="form-group">
           <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <textarea id="message" name="message" rows="4" required></textarea>
         </div>
         <button type="submit" class="btn btn--primary" style="width:100%;">Send Message</button>
       </form>
     </div>
   </div>
 </section>
+
 </main>
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer">
   <div class="container">
-    <p>&copy; 2026 Mohammad Thabet. All rights reserved.</p>
+    <div class="footer__links">
+      <a href="https://github.com/MohammadThabetHassan" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/mohammadthabet/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:Mohammad_Thabet@hotmail.com">Email</a>
+    </div>
+    <p>&copy; 2026 Mohammad Thabet. Built with care in Dubai.</p>
   </div>
 </footer>
 
-<!-- ===== SCRIPTS ===== -->
 <script>
-  // Mobile nav toggle
+  // Mobile nav
   function toggleNav() {
     var links = document.getElementById('navLinks');
     var btn = document.querySelector('.nav__toggle');
     var open = links.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open);
+    btn.setAttribute('aria-expanded', String(open));
   }
-
-  // Close mobile nav on link click
   document.querySelectorAll('.nav__links a').forEach(function(link) {
     link.addEventListener('click', function() {
-      var navLinks = document.getElementById('navLinks');
-      var btn = document.querySelector('.nav__toggle');
-      navLinks.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
+      document.getElementById('navLinks').classList.remove('open');
+      document.querySelector('.nav__toggle').setAttribute('aria-expanded', 'false');
     });
   });
-
-  // Close mobile nav on Escape key
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
-      var navLinks = document.getElementById('navLinks');
-      var btn = document.querySelector('.nav__toggle');
-      navLinks.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
+      document.getElementById('navLinks').classList.remove('open');
+      document.querySelector('.nav__toggle').setAttribute('aria-expanded', 'false');
     }
   });
+
+  // Project filter
+  function filterProjects(category) {
+    var cards = document.querySelectorAll('.project-card');
+    var btns = document.querySelectorAll('.filter-btn');
+    btns.forEach(function(b) { b.classList.toggle('active', b.dataset.filter === category); });
+    cards.forEach(function(card) {
+      if (category === 'all') {
+        card.classList.remove('hidden');
+      } else {
+        var cats = card.dataset.category.split(' ');
+        card.classList.toggle('hidden', cats.indexOf(category) === -1);
+      }
+    });
+  }
 </script>
 </body>
 </html>
