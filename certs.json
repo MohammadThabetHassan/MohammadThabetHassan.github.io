@@ -1,0 +1,131 @@
+{
+  "badges": [
+    {
+      "name": "GitHub Foundations",
+      "image": "https://github.com/user-attachments/assets/effd0f1b-c611-4269-ac37-6b7d0d794d98",
+      "url": "https://www.credly.com/badges/4c1c7cb6-0ac1-4a05-b4a6-1b24473ca384/public_url"
+    },
+    {
+      "name": "OPSWAT ICIP",
+      "image": "https://github.com/user-attachments/assets/0990b8f9-8a53-4341-8e70-7e67aa36f949",
+      "url": "https://www.credly.com/badges/bc8a3f43-167d-4d01-8977-6726233959a8/public_url"
+    },
+    {
+      "name": "AWS Cloud 101",
+      "image": "https://github.com/user-attachments/assets/242f3b14-982d-4c8b-971b-99a22ffeb77c",
+      "url": "https://www.credly.com/badges/0081edcf-1f16-4a5e-8228-80f3ebbc1ec4/public_url"
+    },
+    {
+      "name": "Introduction to Modern AI",
+      "image": "https://github.com/user-attachments/assets/351621b8-f5de-401a-89db-4d3a1f67ae4e",
+      "url": "https://www.credly.com/badges/d8a65f22-094a-4622-a6e2-7b6d49404744/public_url"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Cybersecurity Professional Certificate",
+      "issuer": "Google",
+      "image": "img/cert7.jpg",
+      "verify": "https://www.coursera.org/account/accomplishments/professional-cert/2A2DCLQHM86N",
+      "category": "cybersecurity"
+    },
+    {
+      "name": "Technical Support Fundamentals",
+      "issuer": "Google",
+      "image": "img/cert1.jpg",
+      "verify": "https://www.coursera.org/account/accomplishments/verify/WFVKJ58L2J3F",
+      "category": "cybersecurity"
+    },
+    {
+      "name": "Intro to Networks & Cisco Devices",
+      "issuer": "Cisco",
+      "image": "img/cert10.jpg",
+      "verify": "https://www.coursera.org/account/accomplishments/verify/BBRN5D4AU8BN",
+      "category": "cybersecurity"
+    },
+    {
+      "name": "Ethical Hacking Essentials",
+      "issuer": "EC-Council",
+      "image": "img/cert12.jpg",
+      "verify": "https://www.coursera.org/account/accomplishments/verify/A5P76UHQYRKE",
+      "category": "cybersecurity"
+    },
+    {
+      "name": "Cybersecurity Bootcamp",
+      "issuer": "Nomu Al Ghurair",
+      "image": "img/cert13.jpg",
+      "verify": "",
+      "category": "cybersecurity"
+    },
+    {
+      "name": "Intro to Java & OOP",
+      "issuer": "UPenn",
+      "image": "img/cert5.jpg",
+      "verify": "https://www.coursera.org/account/accomplishments/verify/EGEAL2483HMK",
+      "category": "programming"
+    },
+    {
+      "name": "Crash Course on Python",
+      "issuer": "Google",
+      "image": "img/cert4.jpg",
+      "verify": "https://www.coursera.org/account/accomplishments/verify/6KBS9M2RM7DW",
+      "category": "programming"
+    },
+    {
+      "name": "Intro to Android App Dev",
+      "issuer": "Meta",
+      "image": "img/cert2.jpg",
+      "verify": "https://www.coursera.org/account/accomplishments/verify/QXNKHJXJCYQN",
+      "category": "programming"
+    },
+    {
+      "name": "HTML CSS JavaScript",
+      "issuer": "U of London",
+      "image": "img/cert6.jpg",
+      "verify": "https://www.coursera.org/account/accomplishments/verify/7F7LGMUVY9Z9",
+      "category": "programming"
+    },
+    {
+      "name": "Data Structures",
+      "issuer": "UC San Diego",
+      "image": "img/cert11.jpg",
+      "verify": "https://coursera.org/verify/8KNDAUQFXLQL",
+      "category": "programming"
+    },
+    {
+      "name": "UX Design Foundations",
+      "issuer": "Google",
+      "image": "img/cert3.jpg",
+      "verify": "https://www.coursera.org/account/accomplishments/verify/9MYE7E6GYT2N",
+      "category": "programming"
+    },
+    {
+      "name": "Introduction to Databases",
+      "issuer": "Meta",
+      "image": "img/cert14.jpg",
+      "verify": "https://www.coursera.org/account/accomplishments/verify/5ODN2WN5FVU6",
+      "category": "programming"
+    },
+    {
+      "name": "Data Analysis Fundamentals",
+      "issuer": "Udacity",
+      "image": "img/cert8.jpg",
+      "verify": "",
+      "category": "data"
+    },
+    {
+      "name": "Data Analysis & Visualization — Power BI",
+      "issuer": "Udacity",
+      "image": "img/cert9.jpg",
+      "verify": "https://www.udacity.com/certificate/e/11f16326-4c8c-11ee-901e-ef36537b847b",
+      "category": "data"
+    },
+    {
+      "name": "Advanced Exploitation and Scripting Techniques",
+      "issuer": "Packt",
+      "image": "img/cert15.jpg",
+      "verify": "https://www.coursera.org/account/accomplishments/verify/06F9BS5LMVSD",
+      "category": "cybersecurity"
+    }
+  ]
+}

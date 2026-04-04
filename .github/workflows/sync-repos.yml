@@ -1,0 +1,62 @@
+name: Auto-Sync GitHub Repos
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-repos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch repos and update portfolio
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: MohammadThabetHassan
+        run: |
+          echo "Fetching repos for $USERNAME..."
+          REPOS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+            "https://api.github.com/users/$USERNAME/repos?sort=updated&per_page=100" \
+            | jq '[.[] | select(.fork == false) | {
+              name: .name,
+              description: (.description // "No description provided."),
+              language: (.language // "Code"),
+              topics: (.topics // []),
+              stargazers_count: .stargazers_count,
+              updated_at: .updated_at,
+              html_url: .html_url,
+              homepage: (.homepage // "")
+            }]')
+
+          echo "$REPOS" > repos-data.json
+          echo "Fetched $(echo "$REPOS" | jq length) repositories"
+
+          # Generate a deployable projects JSON
+          echo "$REPOS" | jq '
+            map({
+              name,
+              description,
+              language,
+              topics,
+              stargazers_count,
+              updated_at,
+              html_url,
+              homepage
+            })' > projects.json
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add repos-data.json projects.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: auto-sync GitHub repos ($(date '+%Y-%m-%d %H:%M'))"
+            git push
+          fi

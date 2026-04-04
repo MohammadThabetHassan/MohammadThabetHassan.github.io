@@ -1,0 +1,45 @@
+name: Auto-Sync Projects
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch repos and update projects.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: MohammadThabetHassan
+        run: |
+          curl -s -H "Authorization: token $GITHUB_TOKEN" \
+            "https://api.github.com/users/$USERNAME/repos?sort=updated&per_page=100" \
+            | jq '[.[] | select(.fork == false) | {
+              name: .name,
+              description: (.description // "No description provided."),
+              language: (.language // "Code"),
+              topics: (.topics // []),
+              stargazers_count: .stargazers_count,
+              updated_at: .updated_at,
+              html_url: .html_url,
+              homepage: (.homepage // "")
+            }]' > projects.json
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add projects.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "chore: auto-sync projects"
+            git push
+          fi
