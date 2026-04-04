@@ -1,0 +1,162 @@
+[
+  {
+    "name": "MohammadThabetHassan.github.io",
+    "description": "No description provided.",
+    "language": "HTML",
+    "topics": [],
+    "stargazers_count": 0,
+    "updated_at": "2026-04-04T04:39:42Z",
+    "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
+    "homepage": ""
+  },
+  {
+    "name": "xai-ids",
+    "description": "Explainable AI Intrusion Detection System using SHAP, LIME, and XCS across CIC-IDS-2017, UNSW-NB15, and CSE-CIC-IDS-2018 with live browser-based XGBoost inference.",
+    "language": "HTML",
+    "topics": [],
+    "stargazers_count": 0,
+    "updated_at": "2026-04-04T03:25:22Z",
+    "html_url": "https://github.com/MohammadThabetHassan/xai-ids",
+    "homepage": "https://mohammadthabethassan.github.io/xai-ids/"
+  },
+  {
+    "name": "Voice-Deepfake-Vishing-Detector-Generator",
+    "description": "A toolkit for detecting and generating voice deepfake vishing attacks using audio analysis and synthetic voice modeling. Built for research, awareness, and defense.",
+    "language": "Python",
+    "topics": [],
+    "stargazers_count": 0,
+    "updated_at": "2026-04-04T02:00:11Z",
+    "html_url": "https://github.com/MohammadThabetHassan/Voice-Deepfake-Vishing-Detector-Generator",
+    "homepage": ""
+  },
+  {
+    "name": "bcs407-campus-safety",
+    "description": "No description provided.",
+    "language": "Python",
+    "topics": [],
+    "stargazers_count": 0,
+    "updated_at": "2026-04-04T01:56:32Z",
+    "html_url": "https://github.com/MohammadThabetHassan/bcs407-campus-safety",
+    "homepage": ""
+  },
+  {
+    "name": "MohammadThabetHassan",
+    "description": "No description provided.",
+    "language": "Code",
+    "topics": [],
+    "stargazers_count": 1,
+    "updated_at": "2026-04-04T01:18:58Z",
+    "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan",
+    "homepage": ""
+  },
+  {
+    "name": "Log-Monitoring-and-Alert-System",
+    "description": "Log Monitoring and Alert System is a high-performance tool for DevOps, sysadmins, and SREs. It monitors logs in real-time using a C parser and Bash scripting, triggers alerts via email and JSON, and supports configurable thresholds, deduplication, cron integration, and simulated log generation.",
+    "language": "C",
+    "topics": [],
+    "stargazers_count": 0,
+    "updated_at": "2025-04-28T14:05:41Z",
+    "html_url": "https://github.com/MohammadThabetHassan/Log-Monitoring-and-Alert-System",
+    "homepage": ""
+  },
+  {
+    "name": "Impactathon",
+    "description": "No description provided.",
+    "language": "Python",
+    "topics": [],
+    "stargazers_count": 0,
+    "updated_at": "2025-02-16T11:48:43Z",
+    "html_url": "https://github.com/MohammadThabetHassan/Impactathon",
+    "homepage": ""
+  },
+  {
+    "name": "TokenAbuse-Azure",
+    "description": "The TokenAbuse-Azure CTF challenge demonstrates how Microsoft Graph API extraction of OAuth tokens leads to SharePoint enumeration and sensitive file exfiltration. We used TokenTacticsV2 to take advantage of Device Code Authentication and misconfigured SharePoint permissions during the attack sequence to retrieve the final flag. 🚀",
+    "language": "Code",
+    "topics": [],
+    "stargazers_count": 1,
+    "updated_at": "2025-02-13T07:34:52Z",
+    "html_url": "https://github.com/MohammadThabetHassan/TokenAbuse-Azure",
+    "homepage": ""
+  },
+  {
+    "name": "organize-pdfs",
+    "description": "Multi-Level PDF File Organizer",
+    "language": "Shell",
+    "topics": [],
+    "stargazers_count": 0,
+    "updated_at": "2024-11-28T19:56:15Z",
+    "html_url": "https://github.com/MohammadThabetHassan/organize-pdfs",
+    "homepage": ""
+  },
+  {
+    "name": "organize_pdfs",
+    "description": "No description provided.",
+    "language": "C",
+    "topics": [],
+    "stargazers_count": 0,
+    "updated_at": "2024-11-28T19:55:24Z",
+    "html_url": "https://github.com/MohammadThabetHassan/organize_pdfs",
+    "homepage": ""
+  },
+  {
+    "name": "Java-Automated-Bots",
+    "description": "No description provided.",
+    "language": "Java",
+    "topics": [],
+    "stargazers_count": 1,
+    "updated_at": "2024-10-07T18:09:06Z",
+    "html_url": "https://github.com/MohammadThabetHassan/Java-Automated-Bots",
+    "homepage": ""
+  },
+  {
+    "name": "CUManger",
+    "description": "No description provided.",
+    "language": "C++",
+    "topics": [],
+    "stargazers_count": 1,
+    "updated_at": "2024-10-07T18:09:05Z",
+    "html_url": "https://github.com/MohammadThabetHassan/CUManger",
+    "homepage": ""
+  },
+  {
+    "name": "Assistive-Hologram-Projecting-Glasses-for-Individuals-with-Hearing-Impairments",
+    "description": "No description provided.",
+    "language": "C++",
+    "topics": [],
+    "stargazers_count": 1,
+    "updated_at": "2024-10-07T18:09:04Z",
+    "html_url": "https://github.com/MohammadThabetHassan/Assistive-Hologram-Projecting-Glasses-for-Individuals-with-Hearing-Impairments",
+    "homepage": ""
+  },
+  {
+    "name": "Mohammad_AI",
+    "description": "No description provided.",
+    "language": "Python",
+    "topics": [],
+    "stargazers_count": 1,
+    "updated_at": "2024-10-07T18:09:03Z",
+    "html_url": "https://github.com/MohammadThabetHassan/Mohammad_AI",
+    "homepage": ""
+  },
+  {
+    "name": "foodwasteapp",
+    "description": "No description provided.",
+    "language": "C++",
+    "topics": [],
+    "stargazers_count": 1,
+    "updated_at": "2024-10-07T18:09:02Z",
+    "html_url": "https://github.com/MohammadThabetHassan/foodwasteapp",
+    "homepage": ""
+  },
+  {
+    "name": "web",
+    "description": "No description provided.",
+    "language": "HTML",
+    "topics": [],
+    "stargazers_count": 1,
+    "updated_at": "2024-10-07T18:09:02Z",
+    "html_url": "https://github.com/MohammadThabetHassan/web",
+    "homepage": ""
+  }
+]
