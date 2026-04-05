@@ -1,5 +1,15 @@
 [
   {
+    "name": "MohammadThabetHassan.github.io",
+    "description": "No description provided.",
+    "language": "HTML",
+    "topics": [],
+    "stargazers_count": 0,
+    "updated_at": "2026-04-04T18:46:24Z",
+    "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
+    "homepage": ""
+  },
+  {
     "name": "xai-ids",
     "description": "Explainable AI Intrusion Detection System using SHAP, LIME, and XCS across CIC-IDS-2017, UNSW-NB15, and CSE-CIC-IDS-2018 with live browser-based XGBoost inference.",
     "language": "HTML",
@@ -8,16 +18,6 @@
     "updated_at": "2026-04-04T16:50:38Z",
     "html_url": "https://github.com/MohammadThabetHassan/xai-ids",
     "homepage": "https://mohammadthabethassan.github.io/xai-ids/"
-  },
-  {
-    "name": "MohammadThabetHassan.github.io",
-    "description": "No description provided.",
-    "language": "HTML",
-    "topics": [],
-    "stargazers_count": 0,
-    "updated_at": "2026-04-04T13:00:47Z",
-    "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
-    "homepage": ""
   },
   {
     "name": "Voice-Deepfake-Vishing-Detector-Generator",
