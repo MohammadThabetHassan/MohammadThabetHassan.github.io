@@ -1,17 +1,7 @@
 [
   {
-    "name": "MohammadThabetHassan.github.io",
-    "description": "No description provided.",
-    "language": "HTML",
-    "topics": [],
-    "stargazers_count": 0,
-    "updated_at": "2026-06-10T14:53:11Z",
-    "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
-    "homepage": ""
-  },
-  {
     "name": "VoiceGuard",
-    "description": "Real-time voice deepfake detection, synthesis watermarking & vishing defence — XLS-R+AASIST (2.61% EER), explainable, edge-ready. FastAPI + React. IEEE SM2026.",
+    "description": "Real-time voice deepfake detection, synthesis watermarking & vishing defence — XLS-R + AASIST (2.84% EER, v9c) that also catches modern voice clones & premium TTS. Explainable, edge-ready (0.62 MB ONNX), with an IPED forensic add-on. FastAPI + React. IEEE SM2026.",
     "language": "Python",
     "topics": [
       "aasist",
@@ -32,8 +22,18 @@
       "xls-r"
     ],
     "stargazers_count": 1,
-    "updated_at": "2026-06-10T06:03:40Z",
+    "updated_at": "2026-06-10T19:50:56Z",
     "html_url": "https://github.com/MohammadThabetHassan/VoiceGuard",
+    "homepage": "https://voice-deepfake-vishing-detector-generator.eu.cc"
+  },
+  {
+    "name": "MohammadThabetHassan.github.io",
+    "description": "No description provided.",
+    "language": "HTML",
+    "topics": [],
+    "stargazers_count": 0,
+    "updated_at": "2026-06-10T15:46:33Z",
+    "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
     "homepage": ""
   },
   {
