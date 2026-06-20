@@ -1,35 +1,5 @@
 [
   {
-    "name": "MohammadThabetHassan.github.io",
-    "description": "No description provided.",
-    "language": "HTML",
-    "topics": [],
-    "stargazers_count": 0,
-    "updated_at": "2026-06-19T15:23:08Z",
-    "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
-    "homepage": ""
-  },
-  {
-    "name": "TokenAbuse-Azure",
-    "description": "The TokenAbuse-Azure CTF challenge demonstrates how Microsoft Graph API extraction of OAuth tokens leads to SharePoint enumeration and sensitive file exfiltration. We used TokenTacticsV2 to take advantage of Device Code Authentication and misconfigured SharePoint permissions during the attack sequence to retrieve the final flag. 🚀",
-    "language": "PowerShell",
-    "topics": [],
-    "stargazers_count": 1,
-    "updated_at": "2026-06-12T09:54:20Z",
-    "html_url": "https://github.com/MohammadThabetHassan/TokenAbuse-Azure",
-    "homepage": ""
-  },
-  {
-    "name": "MohammadThabetHassan",
-    "description": "No description provided.",
-    "language": "Code",
-    "topics": [],
-    "stargazers_count": 1,
-    "updated_at": "2026-06-12T09:43:48Z",
-    "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan",
-    "homepage": ""
-  },
-  {
     "name": "VoiceGuard",
     "description": "Real-time voice deepfake detection, synthesis watermarking & vishing defence — XLS-R + AASIST (2.84% EER, v9c) that also catches modern voice clones & premium TTS. Explainable, edge-ready (0.62 MB ONNX), with an IPED forensic add-on. FastAPI + React. IEEE SM2026.",
     "language": "Python",
@@ -52,9 +22,39 @@
       "xls-r"
     ],
     "stargazers_count": 1,
-    "updated_at": "2026-06-12T09:26:07Z",
+    "updated_at": "2026-06-20T00:18:37Z",
     "html_url": "https://github.com/MohammadThabetHassan/VoiceGuard",
     "homepage": "https://voice-deepfake-vishing-detector-generator.eu.cc"
+  },
+  {
+    "name": "MohammadThabetHassan",
+    "description": "No description provided.",
+    "language": "Code",
+    "topics": [],
+    "stargazers_count": 1,
+    "updated_at": "2026-06-19T23:41:07Z",
+    "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan",
+    "homepage": ""
+  },
+  {
+    "name": "MohammadThabetHassan.github.io",
+    "description": "No description provided.",
+    "language": "HTML",
+    "topics": [],
+    "stargazers_count": 0,
+    "updated_at": "2026-06-19T19:51:27Z",
+    "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
+    "homepage": ""
+  },
+  {
+    "name": "TokenAbuse-Azure",
+    "description": "The TokenAbuse-Azure CTF challenge demonstrates how Microsoft Graph API extraction of OAuth tokens leads to SharePoint enumeration and sensitive file exfiltration. We used TokenTacticsV2 to take advantage of Device Code Authentication and misconfigured SharePoint permissions during the attack sequence to retrieve the final flag. 🚀",
+    "language": "PowerShell",
+    "topics": [],
+    "stargazers_count": 1,
+    "updated_at": "2026-06-12T09:54:20Z",
+    "html_url": "https://github.com/MohammadThabetHassan/TokenAbuse-Azure",
+    "homepage": ""
   },
   {
     "name": "bcs407-campus-safety",
