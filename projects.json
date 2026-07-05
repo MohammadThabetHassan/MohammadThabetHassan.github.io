@@ -1,11 +1,38 @@
 [
   {
+    "name": "VoiceGuard",
+    "description": "Real-time voice deepfake detection, synthesis watermarking & vishing defence — XLS-R + AASIST (2.84% EER, v9c) that also catches modern voice clones & premium TTS. Explainable, edge-ready (0.62 MB ONNX), with an IPED forensic add-on. FastAPI + React. IEEE SM2026.",
+    "language": "Python",
+    "topics": [
+      "aasist",
+      "ai-security",
+      "anti-spoofing",
+      "asvspoof",
+      "audio-deepfake",
+      "deepfake-detection",
+      "explainable-ai",
+      "fastapi",
+      "onnx",
+      "pytorch",
+      "react",
+      "speech",
+      "vishing",
+      "voice-deepfake-detection",
+      "wav2vec2",
+      "xls-r"
+    ],
+    "stargazers_count": 1,
+    "updated_at": "2026-07-05T08:14:57Z",
+    "html_url": "https://github.com/MohammadThabetHassan/VoiceGuard",
+    "homepage": "https://voice-deepfake-vishing-detector-generator.eu.cc"
+  },
+  {
     "name": "MohammadThabetHassan.github.io",
     "description": "No description provided.",
     "language": "HTML",
     "topics": [],
     "stargazers_count": 0,
-    "updated_at": "2026-07-05T01:50:26Z",
+    "updated_at": "2026-07-05T03:36:05Z",
     "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
     "homepage": ""
   },
@@ -38,33 +65,6 @@
     "updated_at": "2026-06-29T15:38:14Z",
     "html_url": "https://github.com/MohammadThabetHassan/odoo-bootcamp",
     "homepage": ""
-  },
-  {
-    "name": "VoiceGuard",
-    "description": "Real-time voice deepfake detection, synthesis watermarking & vishing defence — XLS-R + AASIST (2.84% EER, v9c) that also catches modern voice clones & premium TTS. Explainable, edge-ready (0.62 MB ONNX), with an IPED forensic add-on. FastAPI + React. IEEE SM2026.",
-    "language": "Python",
-    "topics": [
-      "aasist",
-      "ai-security",
-      "anti-spoofing",
-      "asvspoof",
-      "audio-deepfake",
-      "deepfake-detection",
-      "explainable-ai",
-      "fastapi",
-      "onnx",
-      "pytorch",
-      "react",
-      "speech",
-      "vishing",
-      "voice-deepfake-detection",
-      "wav2vec2",
-      "xls-r"
-    ],
-    "stargazers_count": 1,
-    "updated_at": "2026-06-22T08:00:36Z",
-    "html_url": "https://github.com/MohammadThabetHassan/VoiceGuard",
-    "homepage": "https://voice-deepfake-vishing-detector-generator.eu.cc"
   },
   {
     "name": "MohammadThabetHassan",
