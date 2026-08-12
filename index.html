@@ -2086,13 +2086,13 @@ const SCREENSHOTS = {
   'MohammadAI':'img/mohammadAIimg.JPG',
   'CUManger':'img/CU-Manger.jpg',
   'cu-manger':'img/CU-Manger.jpg',
-  'xai-ids-cicids2017':'https://raw.githubusercontent.com/MohammadThabetHassan/xai-ids-cicids2017/main/image.png',
+  'xai-ids':'https://raw.githubusercontent.com/MohammadThabetHassan/xai-ids/main/image.png',
   'bcs407-campus-safety':'https://raw.githubusercontent.com/MohammadThabetHassan/bcs407-campus-safety/main/results/Screenshot_20260401-053428_Firefox.jpg',
   'Voice-Deepfake-Vishing-Detector-Generator':'https://raw.githubusercontent.com/MohammadThabetHassan/Voice-Deepfake-Vishing-Detector-Generator/main/image.png',
 };
 
 const DEPLOYMENTS = {
-  'xai-ids-cicids2017': 'https://mohammadthabethassan.github.io/xai-ids-cicids2017/',
+  'xai-ids': 'https://mohammadthabethassan.github.io/xai-ids/',
   'bcs407-campus-safety': 'https://mohammadthabethassan.github.io/bcs407-campus-safety/',
   'Mohammad_AI': 'https://mohammadthabethassan.github.io/Mohammad_AI/',
   'Impactathon': 'https://mohammadthabethassan.github.io/Impactathon/',
@@ -2125,7 +2125,7 @@ function categorizeRepo(r){
     'impactathon':['Security','AI/ML'],
     'bcs407-campus-safety':['AI/ML'],
     'tokenabuse-azure':['Security'],
-    'xai-ids-cicids2017':['Security','AI/ML'],
+    'xai-ids':['Security','AI/ML'],
     'voice-deepfake-vishing-detector':['Security','AI/ML'],
   };
   if(known[n]) return known[n];
@@ -2245,7 +2245,7 @@ function renderProjectCards(projects){
 
 function renderFallbackProjects(){
   const fallback = [
-    {name:'xai-ids-cicids2017',description:'Explainable AI Intrusion Detection using SHAP/LIME on CIC-IDS-2017. 99.7% accuracy with full model interpretability. FastAPI + Docker ready.',language:'HTML',topics:['ai','security','ml'],stargazers_count:0,updated_at:'2026-04-04',html_url:'https://github.com/MohammadThabetHassan/xai-ids-cicids2017',homepage:'https://mohammadthabethassan.github.io/xai-ids-cicids2017/'},
+    {name:'xai-ids',description:'Explainable AI Intrusion Detection using SHAP/LIME on CIC-IDS-2017. 99.7% accuracy with full model interpretability. FastAPI + Docker ready.',language:'HTML',topics:['ai','security','ml'],stargazers_count:0,updated_at:'2026-04-04',html_url:'https://github.com/MohammadThabetHassan/xai-ids',homepage:'https://mohammadthabethassan.github.io/xai-ids/'},
     {name:'bcs407-campus-safety',description:'BCS407 Campus Safety Detection — real-time YOLOv8 ONNX object detection for 4 safety classes.',language:'Python',topics:['ai','yolo','object-detection'],stargazers_count:0,updated_at:'2026-03-31',html_url:'https://github.com/MohammadThabetHassan/bcs407-campus-safety',homepage:'https://mohammadthabethassan.github.io/bcs407-campus-safety/'},
     {name:'Voice-Deepfake-Vishing-Detector-Generator',description:'Detects AI-generated deepfake audio via MFCC, jitter & shimmer analysis using XGBoost.',language:'Python',topics:['security','ai','ml'],stargazers_count:0,updated_at:'2026-03-04',html_url:'https://github.com/MohammadThabetHassan/Voice-Deepfake-Vishing-Detector-Generator',homepage:'https://mohammadthabethassan.github.io/Voice-Deepfake-Vishing-Detector-Generator/'},
     {name:'Impactathon',description:'All-in-one SOC dashboard with ML IDS, phishing scanner & threat intelligence.',language:'Python',topics:['security','ai','ml'],stargazers_count:0,updated_at:'2025-02-16',html_url:'https://github.com/MohammadThabetHassan/Impactathon'},
