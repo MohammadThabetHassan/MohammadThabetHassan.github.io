@@ -48,3 +48,11 @@ test('security and contribution guidance are published', () => {
   assert.match(read('SECURITY.md'), /Responsible Disclosure|security/i);
   assert.match(read('CONTRIBUTING.md'), /Pull Request|pull request/i);
 });
+
+
+test('portfolio xai-ids fallback uses canonical repository and deployment URLs', () => {
+  assert.doesNotMatch(index, /xai-ids-cicids2017/);
+  assert.match(index, /'xai-ids':'https:\/\/raw\.githubusercontent\.com\/MohammadThabetHassan\/xai-ids\/main\/image\.png'/);
+  assert.match(index, /'xai-ids': 'https:\/\/mohammadthabethassan\.github\.io\/xai-ids\/'/);
+  assert.match(index, /html_url:'https:\/\/github\.com\/MohammadThabetHassan\/xai-ids'/);
+});
