@@ -1,0 +1,68 @@
+name: Validate portfolio data
+
+on:
+  pull_request:
+    paths:
+      - 'projects.json'
+      - 'repos-data.json'
+      - 'index.html'
+      - '404.html'
+      - 'robots.txt'
+      - '.github/workflows/validate-portfolio-data.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate generated data and site entry points
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate JSON data and required assets
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+
+          const requiredFiles = ['index.html', '404.html', 'robots.txt', 'projects.json', 'repos-data.json'];
+          for (const file of requiredFiles) {
+            if (!fs.existsSync(file)) throw new Error(`Missing required file: ${file}`);
+          }
+
+          const requiredFields = ['name', 'description', 'language', 'topics', 'stargazers_count', 'updated_at', 'html_url', 'homepage'];
+          const datasets = ['projects.json', 'repos-data.json'];
+
+          for (const file of datasets) {
+            let records;
+            try {
+              records = JSON.parse(fs.readFileSync(file, 'utf8'));
+            } catch (error) {
+              throw new Error(`${file} is not valid JSON: ${error.message}`);
+            }
+
+            if (!Array.isArray(records)) throw new Error(`${file} must contain an array`);
+            const names = new Set();
+
+            records.forEach((record, index) => {
+              for (const field of requiredFields) {
+                if (!(field in record)) throw new Error(`${file}[${index}] is missing ${field}`);
+              }
+              if (typeof record.name !== 'string' || record.name.trim() === '') throw new Error(`${file}[${index}].name must be non-empty`);
+              if (names.has(record.name)) throw new Error(`${file} contains duplicate repository: ${record.name}`);
+              names.add(record.name);
+              if (typeof record.html_url !== 'string' || !record.html_url.startsWith('https://github.com/')) {
+                throw new Error(`${file}[${index}].html_url must be an HTTPS GitHub URL`);
+              }
+              if (!Array.isArray(record.topics)) throw new Error(`${file}[${index}].topics must be an array`);
+            });
+          }
+
+          const projects = JSON.parse(fs.readFileSync('projects.json', 'utf8'));
+          const repos = JSON.parse(fs.readFileSync('repos-data.json', 'utf8'));
+          if (projects.length !== repos.length) throw new Error('projects.json and repos-data.json have different record counts');
+
+          console.log(`Validated ${projects.length} portfolio records and ${requiredFiles.length} required files.`);
+          NODE
