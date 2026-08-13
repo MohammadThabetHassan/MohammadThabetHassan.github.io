@@ -13,26 +13,9 @@
       "security",
       "static-analysis"
     ],
-    "stargazers_count": 0,
-    "updated_at": "2026-08-13T10:14:10Z",
+    "stargazers_count": 1,
+    "updated_at": "2026-08-13T18:40:16Z",
     "html_url": "https://github.com/MohammadThabetHassan/trustweave",
-    "homepage": ""
-  },
-  {
-    "name": "mirage-soc-lab",
-    "description": "Controlled SOC lab for deterministic detection engineering, analyst workflow training, and evaluation.",
-    "language": "TypeScript",
-    "topics": [
-      "detection-engineering",
-      "react",
-      "security-operations",
-      "security-training",
-      "soc-lab",
-      "typescript"
-    ],
-    "stargazers_count": 0,
-    "updated_at": "2026-08-13T08:22:10Z",
-    "html_url": "https://github.com/MohammadThabetHassan/mirage-soc-lab",
     "homepage": ""
   },
   {
@@ -50,9 +33,26 @@
       "soc"
     ],
     "stargazers_count": 0,
-    "updated_at": "2026-08-13T07:36:05Z",
+    "updated_at": "2026-08-13T13:15:34Z",
     "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
     "homepage": "https://mohammadthabethassan.github.io"
+  },
+  {
+    "name": "mirage-soc-lab",
+    "description": "Controlled SOC lab for deterministic detection engineering, analyst workflow training, and evaluation.",
+    "language": "TypeScript",
+    "topics": [
+      "detection-engineering",
+      "react",
+      "security-operations",
+      "security-training",
+      "soc-lab",
+      "typescript"
+    ],
+    "stargazers_count": 0,
+    "updated_at": "2026-08-13T08:22:10Z",
+    "html_url": "https://github.com/MohammadThabetHassan/mirage-soc-lab",
+    "homepage": ""
   },
   {
     "name": "VoiceGuard",
