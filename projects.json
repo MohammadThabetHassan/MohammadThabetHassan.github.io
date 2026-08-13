@@ -1,5 +1,24 @@
 [
   {
+    "name": "MohammadThabetHassan.github.io",
+    "description": "Cybersecurity and AI/ML security portfolio — research, publications, verified projects, CTF awards, and technical evidence.",
+    "language": "HTML",
+    "topics": [
+      "ai-security",
+      "cybersecurity",
+      "github-pages",
+      "machine-learning",
+      "portfolio",
+      "red-team",
+      "research",
+      "soc"
+    ],
+    "stargazers_count": 0,
+    "updated_at": "2026-08-13T07:07:53Z",
+    "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
+    "homepage": "https://mohammadthabethassan.github.io"
+  },
+  {
     "name": "mirage-soc-lab",
     "description": "Controlled SOC lab for deterministic detection engineering, analyst workflow training, and evaluation.",
     "language": "TypeScript",
@@ -15,25 +34,6 @@
     "updated_at": "2026-08-13T05:06:25Z",
     "html_url": "https://github.com/MohammadThabetHassan/mirage-soc-lab",
     "homepage": ""
-  },
-  {
-    "name": "MohammadThabetHassan.github.io",
-    "description": "Cybersecurity and AI/ML security portfolio — research, publications, verified projects, CTF awards, and technical evidence.",
-    "language": "HTML",
-    "topics": [
-      "ai-security",
-      "cybersecurity",
-      "github-pages",
-      "machine-learning",
-      "portfolio",
-      "red-team",
-      "research",
-      "soc"
-    ],
-    "stargazers_count": 0,
-    "updated_at": "2026-08-13T02:05:18Z",
-    "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
-    "homepage": "https://mohammadthabethassan.github.io"
   },
   {
     "name": "VoiceGuard",
