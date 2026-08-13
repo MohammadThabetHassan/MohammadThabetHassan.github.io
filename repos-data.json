@@ -12,9 +12,28 @@
       "typescript"
     ],
     "stargazers_count": 0,
-    "updated_at": "2026-08-13T00:49:34Z",
+    "updated_at": "2026-08-13T05:06:25Z",
     "html_url": "https://github.com/MohammadThabetHassan/mirage-soc-lab",
     "homepage": ""
+  },
+  {
+    "name": "MohammadThabetHassan.github.io",
+    "description": "Cybersecurity and AI/ML security portfolio — research, publications, verified projects, CTF awards, and technical evidence.",
+    "language": "HTML",
+    "topics": [
+      "ai-security",
+      "cybersecurity",
+      "github-pages",
+      "machine-learning",
+      "portfolio",
+      "red-team",
+      "research",
+      "soc"
+    ],
+    "stargazers_count": 0,
+    "updated_at": "2026-08-13T02:05:18Z",
+    "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
+    "homepage": "https://mohammadthabethassan.github.io"
   },
   {
     "name": "VoiceGuard",
@@ -42,25 +61,6 @@
     "updated_at": "2026-08-12T21:30:11Z",
     "html_url": "https://github.com/MohammadThabetHassan/VoiceGuard",
     "homepage": "https://voice-guard.tech"
-  },
-  {
-    "name": "MohammadThabetHassan.github.io",
-    "description": "Cybersecurity and AI/ML security portfolio — research, publications, verified projects, CTF awards, and technical evidence.",
-    "language": "HTML",
-    "topics": [
-      "ai-security",
-      "cybersecurity",
-      "github-pages",
-      "machine-learning",
-      "portfolio",
-      "red-team",
-      "research",
-      "soc"
-    ],
-    "stargazers_count": 0,
-    "updated_at": "2026-08-12T21:21:32Z",
-    "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
-    "homepage": "https://mohammadthabethassan.github.io"
   },
   {
     "name": "xai-ids",
@@ -232,16 +232,6 @@
     "homepage": ""
   },
   {
-    "name": "web",
-    "description": "No description provided.",
-    "language": "HTML",
-    "topics": [],
-    "stargazers_count": 1,
-    "updated_at": "2024-10-07T18:09:02Z",
-    "html_url": "https://github.com/MohammadThabetHassan/web",
-    "homepage": ""
-  },
-  {
     "name": "foodwasteapp",
     "description": "No description provided.",
     "language": "C++",
@@ -249,6 +239,16 @@
     "stargazers_count": 1,
     "updated_at": "2024-10-07T18:09:02Z",
     "html_url": "https://github.com/MohammadThabetHassan/foodwasteapp",
+    "homepage": ""
+  },
+  {
+    "name": "web",
+    "description": "No description provided.",
+    "language": "HTML",
+    "topics": [],
+    "stargazers_count": 1,
+    "updated_at": "2024-10-07T18:09:02Z",
+    "html_url": "https://github.com/MohammadThabetHassan/web",
     "homepage": ""
   }
 ]
