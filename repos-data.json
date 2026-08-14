@@ -1,5 +1,24 @@
 [
   {
+    "name": "trustweave",
+    "description": "Local-first deterministic security evidence for declared AI-agent trust boundaries.",
+    "language": "Python",
+    "topics": [
+      "agentic-ai",
+      "ai-agents",
+      "ai-security",
+      "developer-tools",
+      "mcp",
+      "python",
+      "security",
+      "static-analysis"
+    ],
+    "stargazers_count": 2,
+    "updated_at": "2026-08-14T12:29:34Z",
+    "html_url": "https://github.com/MohammadThabetHassan/trustweave",
+    "homepage": ""
+  },
+  {
     "name": "MohammadThabetHassan.github.io",
     "description": "Cybersecurity and AI/ML security portfolio — research, publications, verified projects, CTF awards, and technical evidence.",
     "language": "HTML",
@@ -14,28 +33,9 @@
       "soc"
     ],
     "stargazers_count": 0,
-    "updated_at": "2026-08-14T02:03:33Z",
+    "updated_at": "2026-08-14T07:26:23Z",
     "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
     "homepage": "https://mohammadthabethassan.github.io"
-  },
-  {
-    "name": "trustweave",
-    "description": "Local-first deterministic security evidence for declared AI-agent trust boundaries.",
-    "language": "Python",
-    "topics": [
-      "agentic-ai",
-      "ai-agents",
-      "ai-security",
-      "developer-tools",
-      "mcp",
-      "python",
-      "security",
-      "static-analysis"
-    ],
-    "stargazers_count": 1,
-    "updated_at": "2026-08-13T20:46:27Z",
-    "html_url": "https://github.com/MohammadThabetHassan/trustweave",
-    "homepage": ""
   },
   {
     "name": "mirage-soc-lab",
