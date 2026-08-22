@@ -1,24 +1,5 @@
 [
   {
-    "name": "MohammadThabetHassan.github.io",
-    "description": "Cybersecurity and AI/ML security portfolio — research, publications, verified projects, CTF awards, and technical evidence.",
-    "language": "HTML",
-    "topics": [
-      "ai-security",
-      "cybersecurity",
-      "github-pages",
-      "machine-learning",
-      "portfolio",
-      "red-team",
-      "research",
-      "soc"
-    ],
-    "stargazers_count": 0,
-    "updated_at": "2026-08-21T18:19:09Z",
-    "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
-    "homepage": "https://mohammadthabethassan.github.io"
-  },
-  {
     "name": "trustweave",
     "description": "Local-first deterministic security evidence for declared AI-agent trust boundaries.",
     "language": "Python",
@@ -33,9 +14,28 @@
       "static-analysis"
     ],
     "stargazers_count": 3,
-    "updated_at": "2026-08-20T10:16:57Z",
+    "updated_at": "2026-08-22T00:22:59Z",
     "html_url": "https://github.com/MohammadThabetHassan/trustweave",
     "homepage": ""
+  },
+  {
+    "name": "MohammadThabetHassan.github.io",
+    "description": "Cybersecurity and AI/ML security portfolio — research, publications, verified projects, CTF awards, and technical evidence.",
+    "language": "HTML",
+    "topics": [
+      "ai-security",
+      "cybersecurity",
+      "github-pages",
+      "machine-learning",
+      "portfolio",
+      "red-team",
+      "research",
+      "soc"
+    ],
+    "stargazers_count": 0,
+    "updated_at": "2026-08-21T18:37:52Z",
+    "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
+    "homepage": "https://mohammadthabethassan.github.io"
   },
   {
     "name": "mirage-soc-lab",
