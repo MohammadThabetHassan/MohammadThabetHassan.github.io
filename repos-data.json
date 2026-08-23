@@ -1,5 +1,26 @@
 [
   {
+    "name": "trustweave",
+    "description": "Review your AI agent’s security configuration before deployment. Emphasizes local, deterministic setup under Apache-2.0 license.",
+    "language": "Python",
+    "topics": [
+      "agent-security",
+      "agentic-ai",
+      "ai-agents",
+      "ai-security",
+      "developer-tools",
+      "llm-security",
+      "mcp",
+      "python",
+      "security",
+      "static-analysis"
+    ],
+    "stargazers_count": 3,
+    "updated_at": "2026-08-23T00:33:29Z",
+    "html_url": "https://github.com/MohammadThabetHassan/trustweave",
+    "homepage": ""
+  },
+  {
     "name": "MohammadThabetHassan.github.io",
     "description": "Cybersecurity and AI/ML security portfolio — research, publications, verified projects, CTF awards, and technical evidence.",
     "language": "HTML",
@@ -14,28 +35,9 @@
       "soc"
     ],
     "stargazers_count": 0,
-    "updated_at": "2026-08-22T12:40:53Z",
+    "updated_at": "2026-08-22T18:33:03Z",
     "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
     "homepage": "https://mohammadthabethassan.github.io"
-  },
-  {
-    "name": "trustweave",
-    "description": "Local-first deterministic security evidence for declared AI-agent trust boundaries.",
-    "language": "Python",
-    "topics": [
-      "agentic-ai",
-      "ai-agents",
-      "ai-security",
-      "developer-tools",
-      "mcp",
-      "python",
-      "security",
-      "static-analysis"
-    ],
-    "stargazers_count": 3,
-    "updated_at": "2026-08-22T01:15:32Z",
-    "html_url": "https://github.com/MohammadThabetHassan/trustweave",
-    "homepage": ""
   },
   {
     "name": "mirage-soc-lab",
