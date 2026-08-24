@@ -1,5 +1,24 @@
 [
   {
+    "name": "MohammadThabetHassan.github.io",
+    "description": "Cybersecurity and AI/ML security portfolio — research, publications, verified projects, CTF awards, and technical evidence.",
+    "language": "HTML",
+    "topics": [
+      "ai-security",
+      "cybersecurity",
+      "github-pages",
+      "machine-learning",
+      "portfolio",
+      "red-team",
+      "research",
+      "soc"
+    ],
+    "stargazers_count": 0,
+    "updated_at": "2026-08-24T01:22:09Z",
+    "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
+    "homepage": "https://mohammadthabethassan.github.io"
+  },
+  {
     "name": "trustweave",
     "description": "Review your AI agent’s security configuration before deployment. Emphasizes local, deterministic setup under Apache-2.0 license.",
     "language": "Python",
@@ -19,25 +38,6 @@
     "updated_at": "2026-08-23T22:55:36Z",
     "html_url": "https://github.com/MohammadThabetHassan/trustweave",
     "homepage": ""
-  },
-  {
-    "name": "MohammadThabetHassan.github.io",
-    "description": "Cybersecurity and AI/ML security portfolio — research, publications, verified projects, CTF awards, and technical evidence.",
-    "language": "HTML",
-    "topics": [
-      "ai-security",
-      "cybersecurity",
-      "github-pages",
-      "machine-learning",
-      "portfolio",
-      "red-team",
-      "research",
-      "soc"
-    ],
-    "stargazers_count": 0,
-    "updated_at": "2026-08-23T18:31:11Z",
-    "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
-    "homepage": "https://mohammadthabethassan.github.io"
   },
   {
     "name": "mirage-soc-lab",
