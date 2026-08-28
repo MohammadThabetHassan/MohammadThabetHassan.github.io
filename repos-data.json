@@ -1,34 +1,5 @@
 [
   {
-    "name": "MohammadThabetHassan.github.io",
-    "description": "Cybersecurity and AI/ML security portfolio — research, publications, verified projects, CTF awards, and technical evidence.",
-    "language": "HTML",
-    "topics": [
-      "ai-security",
-      "cybersecurity",
-      "github-pages",
-      "machine-learning",
-      "portfolio",
-      "red-team",
-      "research",
-      "soc"
-    ],
-    "stargazers_count": 0,
-    "updated_at": "2026-08-27T08:09:27Z",
-    "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
-    "homepage": "https://mohammadthabethassan.github.io"
-  },
-  {
-    "name": "disktrace",
-    "description": "Local-first forensic data recovery for disk images, with explicit evidence boundaries.",
-    "language": "Rust",
-    "topics": [],
-    "stargazers_count": 0,
-    "updated_at": "2026-08-26T21:06:02Z",
-    "html_url": "https://github.com/MohammadThabetHassan/disktrace",
-    "homepage": ""
-  },
-  {
     "name": "trustweave",
     "description": "Review your AI agent’s security configuration before deployment. Emphasizes local, deterministic setup under Apache-2.0 license.",
     "language": "Python",
@@ -45,8 +16,37 @@
       "static-analysis"
     ],
     "stargazers_count": 4,
-    "updated_at": "2026-08-23T22:55:36Z",
+    "updated_at": "2026-08-27T22:07:26Z",
     "html_url": "https://github.com/MohammadThabetHassan/trustweave",
+    "homepage": ""
+  },
+  {
+    "name": "MohammadThabetHassan.github.io",
+    "description": "Cybersecurity and AI/ML security portfolio — research, publications, verified projects, CTF awards, and technical evidence.",
+    "language": "HTML",
+    "topics": [
+      "ai-security",
+      "cybersecurity",
+      "github-pages",
+      "machine-learning",
+      "portfolio",
+      "red-team",
+      "research",
+      "soc"
+    ],
+    "stargazers_count": 0,
+    "updated_at": "2026-08-27T21:55:25Z",
+    "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
+    "homepage": "https://mohammadthabethassan.github.io"
+  },
+  {
+    "name": "disktrace",
+    "description": "Local-first forensic data recovery for disk images, with explicit evidence boundaries.",
+    "language": "Rust",
+    "topics": [],
+    "stargazers_count": 0,
+    "updated_at": "2026-08-26T21:06:02Z",
+    "html_url": "https://github.com/MohammadThabetHassan/disktrace",
     "homepage": ""
   },
   {
