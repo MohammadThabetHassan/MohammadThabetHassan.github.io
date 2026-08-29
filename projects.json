@@ -1,5 +1,15 @@
 [
   {
+    "name": "disktrace",
+    "description": "Local-first forensic data recovery for disk images, with explicit evidence boundaries.",
+    "language": "Rust",
+    "topics": [],
+    "stargazers_count": 0,
+    "updated_at": "2026-08-29T11:41:18Z",
+    "html_url": "https://github.com/MohammadThabetHassan/disktrace",
+    "homepage": ""
+  },
+  {
     "name": "MohammadThabetHassan.github.io",
     "description": "Cybersecurity and AI/ML security portfolio — research, publications, verified projects, CTF awards, and technical evidence.",
     "language": "HTML",
@@ -14,19 +24,9 @@
       "soc"
     ],
     "stargazers_count": 0,
-    "updated_at": "2026-08-29T01:14:39Z",
+    "updated_at": "2026-08-29T06:06:06Z",
     "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
     "homepage": "https://mohammadthabethassan.github.io"
-  },
-  {
-    "name": "disktrace",
-    "description": "Local-first forensic data recovery for disk images, with explicit evidence boundaries.",
-    "language": "Rust",
-    "topics": [],
-    "stargazers_count": 0,
-    "updated_at": "2026-08-29T00:49:12Z",
-    "html_url": "https://github.com/MohammadThabetHassan/disktrace",
-    "homepage": ""
   },
   {
     "name": "trustweave",
