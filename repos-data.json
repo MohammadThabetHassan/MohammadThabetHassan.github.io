@@ -1,5 +1,36 @@
 [
   {
+    "name": "trustweave",
+    "description": "Review your AI agent’s security configuration before deployment. Emphasizes local, deterministic setup under Apache-2.0 license.",
+    "language": "Python",
+    "topics": [
+      "agent-security",
+      "agentic-ai",
+      "ai-agents",
+      "ai-security",
+      "developer-tools",
+      "llm-security",
+      "mcp",
+      "python",
+      "security",
+      "static-analysis"
+    ],
+    "stargazers_count": 5,
+    "updated_at": "2026-09-08T16:40:27Z",
+    "html_url": "https://github.com/MohammadThabetHassan/trustweave",
+    "homepage": ""
+  },
+  {
+    "name": "facts-only",
+    "description": "No description provided.",
+    "language": "JavaScript",
+    "topics": [],
+    "stargazers_count": 1,
+    "updated_at": "2026-09-08T16:40:16Z",
+    "html_url": "https://github.com/MohammadThabetHassan/facts-only",
+    "homepage": ""
+  },
+  {
     "name": "MohammadThabetHassan.github.io",
     "description": "Cybersecurity and AI/ML security portfolio — research, publications, verified projects, CTF awards, and technical evidence.",
     "language": "HTML",
@@ -14,19 +45,9 @@
       "soc"
     ],
     "stargazers_count": 0,
-    "updated_at": "2026-09-08T10:49:30Z",
+    "updated_at": "2026-09-08T16:14:34Z",
     "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
     "homepage": "https://mohammadthabethassan.github.io"
-  },
-  {
-    "name": "facts-only",
-    "description": "No description provided.",
-    "language": "JavaScript",
-    "topics": [],
-    "stargazers_count": 0,
-    "updated_at": "2026-09-07T17:47:56Z",
-    "html_url": "https://github.com/MohammadThabetHassan/facts-only",
-    "homepage": ""
   },
   {
     "name": "VoiceGuard",
@@ -54,27 +75,6 @@
     "updated_at": "2026-09-05T12:13:14Z",
     "html_url": "https://github.com/MohammadThabetHassan/VoiceGuard",
     "homepage": "https://voice-guard.tech"
-  },
-  {
-    "name": "trustweave",
-    "description": "Review your AI agent’s security configuration before deployment. Emphasizes local, deterministic setup under Apache-2.0 license.",
-    "language": "Python",
-    "topics": [
-      "agent-security",
-      "agentic-ai",
-      "ai-agents",
-      "ai-security",
-      "developer-tools",
-      "llm-security",
-      "mcp",
-      "python",
-      "security",
-      "static-analysis"
-    ],
-    "stargazers_count": 4,
-    "updated_at": "2026-09-04T19:43:30Z",
-    "html_url": "https://github.com/MohammadThabetHassan/trustweave",
-    "homepage": ""
   },
   {
     "name": "mirage-soc-lab",
