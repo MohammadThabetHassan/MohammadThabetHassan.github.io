@@ -1,5 +1,32 @@
 [
   {
+    "name": "VoiceGuard",
+    "description": "Real-time voice deepfake detection, synthesis watermarking & vishing defence — XLS-R + AASIST (2.84% EER, v9c) that also catches modern voice clones & premium TTS. Explainable, edge-ready (0.62 MB ONNX), with an IPED forensic add-on. FastAPI + React. IEEE SM2026.",
+    "language": "Python",
+    "topics": [
+      "aasist",
+      "ai-security",
+      "anti-spoofing",
+      "asvspoof",
+      "audio-deepfake",
+      "deepfake-detection",
+      "explainable-ai",
+      "fastapi",
+      "onnx",
+      "pytorch",
+      "react",
+      "speech",
+      "vishing",
+      "voice-deepfake-detection",
+      "wav2vec2",
+      "xls-r"
+    ],
+    "stargazers_count": 4,
+    "updated_at": "2026-09-22T04:25:44Z",
+    "html_url": "https://github.com/MohammadThabetHassan/VoiceGuard",
+    "homepage": "https://voice-guard.tech"
+  },
+  {
     "name": "MohammadThabetHassan.github.io",
     "description": "Cybersecurity and AI/ML security portfolio — research, publications, verified projects, CTF awards, and technical evidence.",
     "language": "HTML",
@@ -14,7 +41,7 @@
       "soc"
     ],
     "stargazers_count": 0,
-    "updated_at": "2026-09-21T21:47:00Z",
+    "updated_at": "2026-09-22T03:49:33Z",
     "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
     "homepage": "https://mohammadthabethassan.github.io"
   },
@@ -48,33 +75,6 @@
     "updated_at": "2026-09-08T16:40:16Z",
     "html_url": "https://github.com/MohammadThabetHassan/facts-only",
     "homepage": ""
-  },
-  {
-    "name": "VoiceGuard",
-    "description": "Real-time voice deepfake detection, synthesis watermarking & vishing defence — XLS-R + AASIST (2.84% EER, v9c) that also catches modern voice clones & premium TTS. Explainable, edge-ready (0.62 MB ONNX), with an IPED forensic add-on. FastAPI + React. IEEE SM2026.",
-    "language": "Python",
-    "topics": [
-      "aasist",
-      "ai-security",
-      "anti-spoofing",
-      "asvspoof",
-      "audio-deepfake",
-      "deepfake-detection",
-      "explainable-ai",
-      "fastapi",
-      "onnx",
-      "pytorch",
-      "react",
-      "speech",
-      "vishing",
-      "voice-deepfake-detection",
-      "wav2vec2",
-      "xls-r"
-    ],
-    "stargazers_count": 4,
-    "updated_at": "2026-09-05T12:13:14Z",
-    "html_url": "https://github.com/MohammadThabetHassan/VoiceGuard",
-    "homepage": "https://voice-guard.tech"
   },
   {
     "name": "mirage-soc-lab",
