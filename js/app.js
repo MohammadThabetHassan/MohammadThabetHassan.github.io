@@ -14,13 +14,20 @@ const prefersReducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matc
   renderer.setSize(innerWidth, innerHeight);
   renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
 
-  const N = 4000;
-  const pos = new Float32Array(N * 3);
-  for(let i=0;i<N*3;i++) pos[i] = (Math.random()-0.5)*30;
-  const geo = new THREE.BufferGeometry();
-  geo.setAttribute('position', new THREE.BufferAttribute(pos,3));
-  const mat = new THREE.PointsMaterial({ color:0x00d4ff, size:0.015, transparent:true, opacity:0.5 });
-  const particles = new THREE.Points(geo, mat);
+  // More stars on bigger screens, so the field looks the same everywhere
+  const area = innerWidth * innerHeight;
+  const N = Math.round(Math.min(9000, Math.max(3500, area / 240)));
+  const particles = new THREE.Group();
+  function starLayer(count, size, opacity){
+    const pos = new Float32Array(count * 3);
+    for(let i=0;i<count*3;i++) pos[i] = (Math.random()-0.5)*30;
+    const geo = new THREE.BufferGeometry();
+    geo.setAttribute('position', new THREE.BufferAttribute(pos,3));
+    const mat = new THREE.PointsMaterial({ color:0x00d4ff, size, transparent:true, opacity });
+    return new THREE.Points(geo, mat);
+  }
+  particles.add(starLayer(N, 0.02, 0.55));
+  particles.add(starLayer(Math.round(N / 12), 0.05, 0.9));
   scene.add(particles);
 
   let tX=0, tY=0;
@@ -640,6 +647,56 @@ function fallbackCopy(text, done){
   try{ document.execCommand('copy'); done(); }catch(err){ /* leave the text selectable */ }
   document.body.removeChild(ta);
 }
+
+/* ── GitHub star counts on project cards (cached for an hour, silent on failure) ── */
+(async function initStars(){
+  const KEY = 'gh-stars-v1';
+  let map = null;
+  try{
+    const cached = JSON.parse(localStorage.getItem(KEY) || 'null');
+    if(cached && Date.now() - cached.t < 3600e3) map = cached.map;
+  }catch(e){ /* storage unavailable */ }
+  if(!map){
+    try{
+      const res = await fetch('https://api.github.com/users/MohammadThabetHassan/repos?per_page=100');
+      if(!res.ok) return;
+      const data = await res.json();
+      if(!Array.isArray(data)) return;
+      map = {};
+      data.forEach(r=>{ map[r.name.toLowerCase()] = r.stargazers_count; });
+      try{ localStorage.setItem(KEY, JSON.stringify({ t: Date.now(), map })); }catch(e){ /* ignore */ }
+    }catch(e){ return; }
+  }
+  document.querySelectorAll('.project-card').forEach(card=>{
+    const link = card.querySelector('.proj-link');
+    const footer = card.querySelector('.proj-footer');
+    if(!link || !footer) return;
+    const m = (link.getAttribute('href') || '').match(/github\.com\/MohammadThabetHassan\/([^/?#]+)/i);
+    if(!m) return;
+    const n = map[m[1].toLowerCase()];
+    if(!n) return;
+    const el = document.createElement('div');
+    el.className = 'proj-stars';
+    el.title = n + ' GitHub star' + (n === 1 ? '' : 's');
+    el.textContent = '⭐ ' + n;
+    footer.appendChild(el);
+  });
+})();
+
+/* ── Copy buttons ── */
+document.querySelectorAll('[data-copy]').forEach(btn=>{
+  const original = btn.textContent;
+  btn.addEventListener('click',()=>{
+    const text = btn.getAttribute('data-copy');
+    const done = ()=>{
+      btn.textContent = 'Copied ✓'; btn.classList.add('is-done');
+      setTimeout(()=>{ btn.textContent = original; btn.classList.remove('is-done'); }, 1800);
+    };
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(done, ()=>fallbackCopy(text, done));
+    } else { fallbackCopy(text, done); }
+  });
+});
 
 /* ── Contact Form ── */
 document.getElementById('contactForm').addEventListener('submit',function(e){
