@@ -8,9 +8,9 @@ The `main` branch is the supported version of this portfolio site. Older commits
 
 Please do not open a public issue for a suspected security vulnerability. Report it privately by emailing **Mohammad_Thabet@hotmail.com** with the subject line `Portfolio security report`.
 
-Please include enough detail to reproduce the issue, including the affected URL or file, the steps required to observe it, the potential impact, and any proof-of-concept material that can be shared safely. Please redact personal data, credentials, tokens, and other sensitive information from the report.
+Please include enough detail to reproduce the issue: the affected URL or file, the steps required to observe it, the potential impact, and any proof-of-concept material that can be shared safely. Redact personal data, credentials, tokens and other sensitive information from the report.
 
-If the issue affects a linked project rather than this portfolio site, please report it to the maintainers of that project as well. This policy covers the portfolio website and its repository, including its static assets, client-side JavaScript, GitHub Pages configuration, and automated synchronization workflows.
+If the issue affects a linked project rather than this portfolio site, please report it to the maintainers of that project as well. This policy covers the portfolio website and its repository, including its static assets, client-side JavaScript, GitHub Pages configuration and GitHub Actions workflows.
 
 ## Response expectations
 

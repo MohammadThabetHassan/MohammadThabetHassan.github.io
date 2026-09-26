@@ -1,44 +1,25 @@
 # Contributing
 
-Thank you for taking the time to improve this portfolio site. Keep changes focused, preserve the existing visual language, and verify the site locally before opening a pull request.
+This is a personal portfolio, so most changes come from me. Corrections are welcome: a broken link, a typo, an accessibility problem, or a layout bug on a device I have not tested.
 
-## What to change
+## Before you open a pull request
 
-The site is served as a static GitHub Pages application. Hand-maintained source files include `index.html`, `css/`, `js/`, `img/`, `404.html`, metadata files, and the webpack configuration. Project and repository data may be refreshed by the synchronization workflows; do not edit generated data by hand unless the change is specifically intended to update the generation process.
+1. Run the local server with `npm start` and check the change on a desktop and a phone-sized viewport.
+2. Run `npm test`. It checks that every local reference in `index.html` resolves, that the required sections and contact details are present, and that no link uses plain `http://`.
+3. Keep the change small and focused. One fix per pull request.
 
-Before changing a project card, confirm the source repository, project title, description, category, technology tags, links, and image alt text. Links to external profiles and projects should use HTTPS. New tab links must retain `rel="noopener"`.
+## What to keep in mind
 
-## Local preview
+- The site is plain HTML, CSS and JavaScript with no build step. Do not add a bundler, a framework or a runtime dependency.
+- The page must remain complete without JavaScript. Scripts add behaviour; they never hide content until they run.
+- Images go in `img/` as WebP. Project covers are 1200x675, badge images 320x320, certificate thumbnails 640px wide.
+- Links to other sites open in a new tab and carry `rel="noopener"`.
+- Do not change facts about me (dates, titles, results, author order) unless you can point to the source that shows the current text is wrong.
 
-For a content-only change, open `index.html` in a browser and test the affected desktop and mobile layouts. For a webpack development preview, install the locked dependencies and run:
+## Commit messages
 
-```bash
-npm ci
-npm start
-```
-
-To produce a production build, run:
-
-```bash
-npm run build
-```
-
-Check the browser console, navigation, contact links, project filters, responsive layout, and image fallbacks. Do not commit `node_modules/`, build output, local credentials, or editor metadata.
-
-## Synchronization workflows
-
-The `.github/workflows/` directory contains the scheduled workflows that refresh project and repository data. Treat `projects.json` and `repos-data.json` as generated outputs when a change originates from those workflows. If a synchronization change produces unexpected content, inspect the workflow logs and the upstream repository metadata before editing the generated result.
-
-Workflow changes must be tested against the smallest representative input available. Avoid broad rewrites of generated files in the same pull request as a workflow change; separate the implementation from the resulting data refresh when practical.
-
-## Pull requests
-
-Create a branch from the current `main` branch using a short, descriptive name. Keep each pull request limited to one coherent change. Use a conventional commit message such as `docs: update contribution guidance`, `fix: correct project link`, or `chore(ci): validate generated data`.
-
-The pull-request description should explain the reason for the change, identify the affected files or workflows, and record the checks that were run. Include screenshots for visual changes when they make the result easier to review. Confirm that the diff contains no secrets, personal data, unrelated generated churn, or accidental dependency changes.
-
-Maintainers may request revisions before merging. Do not force-push shared branches or rewrite commits that another contributor is reviewing.
+Use a short imperative subject with a type prefix, for example `fix: correct DOI link for paper 2` or `docs: explain how to add a badge`.
 
 ## Security issues
 
-Do not report security vulnerabilities in a public issue. Follow the private reporting process in [`SECURITY.md`](SECURITY.md).
+Do not report security problems in a public issue. Follow [SECURITY.md](SECURITY.md).

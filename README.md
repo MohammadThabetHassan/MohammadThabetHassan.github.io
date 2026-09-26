@@ -1,80 +1,103 @@
-# Mohammad Thabet - Portfolio Site
+# mohammadthabethassan.github.io
 
-Personal portfolio deployed via GitHub Pages at [mohammadthabethassan.github.io](https://mohammadthabethassan.github.io).
+Source for my portfolio, served by GitHub Pages at [mohammadthabethassan.github.io](https://mohammadthabethassan.github.io).
 
 ## Stack
 
-Plain HTML + CSS + vanilla JS. No build step required - GitHub Pages serves `index.html` directly.
+Plain HTML, one stylesheet and one script. No framework, no bundler, no build step: GitHub Pages serves the `main` branch as-is. Three.js (particle background and globe) and GSAP (timeline animation) load from cdnjs; everything else is in the repository.
+
+```
+index.html          page structure and content, in section order
+css/style.css       the whole stylesheet
+js/app.js           background, globe, cursor, typewriter, skills sphere, project cards, certificates, contact form
+certs.json          Credly badges and certificates (rendered by js/app.js)
+img/portrait.webp   photo used in the hero and About
+img/projects/       project covers, 1200x675 WebP, taken from each repository's own screenshots
+img/badges/         Credly badge images, 320x320 WebP
+img/certs/          certificate thumbnails, 640px wide WebP
+img/og.png          social preview image, 1200x630
+cv.pdf              downloadable CV
+tests/              checks run by CI
+scripts/serve.js    local preview server
+```
 
 ## Sections
 
-| Section | Description |
-|---------|-------------|
-| Hero | Photo, name, tagline, CTA buttons, social links |
-| About | Bio, photo, stats (projects, certs, awards) |
-| Achievements | Competition wins, hackathons, workshops |
-| Skills | Categorized skill tags (Languages, Security, Tools) |
-| Projects | 10 project cards with category filter (Security, AI, Mobile, Tools) |
-| Education | B.Sc. Cyber Security at CUD |
-| Certifications | 3 Credly badges + 11 course certificates |
-| Contact | Email, LinkedIn, GitHub, Phone + contact form |
+| # | Section | What is in it |
+|---|---|---|
+| | Hero | Name, typewriter roles, one-line summary, CV download, portrait inside the globe |
+| | Stats | IEEE papers, projects, credentials, awards |
+| 01 | About | Bio, contact chips, photo, and two experience cards |
+| 02 | Skills | Draggable 3D tag sphere (security, programming, soft skills) |
+| 03 | Projects | Ten project cards with real screenshots and a category filter, plus links to more repositories |
+| 04 | Research | Three IEEE papers with DOIs and one manuscript in preparation |
+| 05 | Achievements | Competition timeline |
+| 06 | Certifications | Five Credly badges and eighteen certificates with a category filter |
+| 07 | Contact | Email, LinkedIn, GitHub, phone, and a form that opens your mail app |
 
-## How to Edit
+## Local preview
+
+```bash
+npm start
+```
+
+This runs a small static server on http://localhost:8080 with no dependencies. Use it rather than opening `index.html` from disk: the certificates section loads `certs.json` with `fetch`, which browsers block on `file://` URLs.
+
+## Checks
+
+```bash
+npm test
+```
+
+The tests confirm that the required sections and navigation links exist, that the contact details are current, that every local file referenced by `index.html`, `js/app.js` and `certs.json` is in the repository, that every project card has a cover image and https links, that the CV is a real PDF, and that DOI links are present. GitHub Actions runs the same tests on every push to `main` and every pull request, and validates the HTML with html-validate.
+
+## Editing
 
 ### Add a project
 
-1. Find the `<div class="projects__grid">` section in `index.html`
-2. Copy an existing `<article class="project-card" data-category="...">` block
-3. Update `data-category` with one or more: `security`, `ai`, `mobile`, `tools`
-4. Update the title, description, tech tags, and GitHub link
-5. To add an image, put it inside `.project-card__header`:
+Add an object to the `PROJECTS` array near the top of the projects block in `js/app.js`:
 
-```html
-<article class="project-card" data-category="security">
-  <div class="project-card__header">
-    <img src="img/your-image.jpg" alt="Screenshot" loading="lazy" onerror="this.style.display='none'">
-    <svg class="project-card__header-icon" ...><!-- fallback icon --></svg>
-    <span class="project-card__category">Security</span>
-  </div>
-  <div class="project-card__body">
-    <h3 class="project-card__title">Project Name</h3>
-    <p class="project-card__desc">What it does and why it matters.</p>
-    <div class="project-card__tags">
-      <span class="tag">Python</span>
-      <span class="tag">Docker</span>
-    </div>
-    <div class="project-card__links">
-      <a href="https://github.com/..." target="_blank" rel="noopener noreferrer">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">...</svg>
-        Source Code
-      </a>
-    </div>
-  </div>
-</article>
+```js
+{
+  title:'Project name', cats:['Security','AI/ML'], lang:'Python', year:'2026',
+  image:'img/projects/project-name.webp', alt:'What the screenshot shows',
+  desc:'What it does and why it matters.',
+  facts:['One concrete number','Another'],
+  topics:['topic-one','topic-two'],
+  code:'https://github.com/MohammadThabetHassan/project-name',
+  demo:'https://...',   // optional; also paper: and pypi:
+}
 ```
 
-### Add a certification
+`cats` takes any of `Security`, `AI/ML`, `SOC`, `Forensics`, `Web`, `Tools`; the filter buttons and their counts are generated from these values. Put a 1200x675 WebP screenshot in `img/projects/`. Cards are shown in array order.
 
-Copy a `<div class="cert-card">` block and update the badge image, title, issuer, and verify link.
+### Add a certificate or badge
 
-### Add a Credly badge
+Edit `certs.json`. A certificate needs `name`, `issuer`, `issuerKey` (used for the coloured pill: `Google`, `Meta`, `Cisco`, `Udacity`, `UCSD`, `UPenn`, `Coursera`, `ECCouncil`, `Packt`, `Nomu`, `London`, or `Other`), `image` (640px-wide WebP in `img/certs/`), `verify` (the issuer's verification URL, or an empty string), `category` (`cybersecurity`, `ai`, `programming` or `data`) and an optional `meta` line. A badge needs `name`, `issuer`, `image` (320x320 WebP in `img/badges/`) and the Credly public URL.
 
-Add inside the `<div class="certs__badges">` section:
-```html
-<a class="certs__badge-item" href="CREDLY_URL" target="_blank" rel="noopener noreferrer">
-  <img src="BADGE_IMAGE_URL" alt="Badge name" loading="lazy">
-  <span>Badge Name</span>
-</a>
-```
+### Add a publication
+
+Copy one `<article class="pub-card">` block in the `#publications` section of `index.html` and update the number, title, authors, venue, result line and links. Keep author order as indexed by the publisher.
 
 ### Add an achievement
 
-Copy an `<div class="achievement-card">` block and update the icon, title, and description.
+Copy one `<div class="t-item">` block in the `#achievements` timeline and update the icon, title, text and year.
 
-## Images
+### Update the CV
 
-Place files in the `img/` directory. The hero photo is `img/img.jpg`. Cert badges are displayed at 40x40px. Project images are displayed at full card width, 160px height, `object-fit: cover`.
+Replace `cv.pdf`. The hero button downloads it as `Mohammad_Thabet_Hassan_CV.pdf`.
 
-## Local Preview
+### Images
 
-Open `index.html` in any browser. No server or build needed.
+Convert new images to WebP before committing. With Python and Pillow:
+
+```python
+from PIL import Image
+im = Image.open("source.png")
+im.thumbnail((1200, 1200))      # 640 for certificates, 320 for badges
+im.save("img/projects/name.webp", "WEBP", quality=82, method=6)
+```
+
+## License
+
+Code is released under the MIT License (see `LICENSE.txt`). The text, photos, certificate images and CV are personal content and are not covered by that license.
