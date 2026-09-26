@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Page not found</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page not found | Mohammad Thabet Hassan</title>
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#00d4ff">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;500&family=Instrument+Serif&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
 <style>
-  .nf { min-height: 70vh; display: grid; place-items: center; text-align: center; padding-block: 64px; }
-  .nf h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(2.5rem, 6vw, 4rem); margin: 12px 0 16px; }
-  .nf p { color: var(--text-2); max-width: 44ch; margin-inline: auto; }
-  .nf .back { margin-top: 24px; }
+  .nf { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 8%; }
+  .nf-code {
+    font-family: var(--font-mono);
+    font-size: clamp(4rem, 12vw, 7rem);
+    font-weight: 700;
+    color: var(--cyan);
+    line-height: 1;
+    text-shadow: 0 0 30px rgba(0,212,255,0.4);
+    margin-bottom: 1rem;
+  }
+  .nf h1 { font-family: var(--font-mono); font-size: clamp(1.4rem, 3vw, 2rem); color: var(--text); margin-bottom: 1rem; }
+  .nf p { color: var(--muted); max-width: 44ch; margin: 0 auto 2rem; line-height: 1.7; }
 </style>
 </head>
 <body>
-<main class="nf wrap">
+<main class="nf">
   <div>
-    <p class="eyebrow">404</p>
+    <div class="nf-code">404</div>
     <h1>That page does not exist.</h1>
     <p>The address may have changed. Everything on this site lives on one page, so the home page is the best place to start.</p>
-    <p class="back"><a class="btn btn-primary" href="/">Go to the home page</a></p>
+    <a class="btn btn-primary" href="/">Back to the portfolio</a>
   </div>
 </main>
 </body>

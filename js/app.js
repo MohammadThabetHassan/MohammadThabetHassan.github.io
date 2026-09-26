@@ -251,20 +251,17 @@ if(aboutCard){
   const skills = [
     {name:'Kali Linux',type:'security'},{name:'Burp Suite',type:'security'},{name:'Metasploit',type:'security'},
     {name:'Wireshark',type:'security'},{name:'Nmap',type:'security'},{name:'SIEM / Log Analysis',type:'security'},
-    {name:'Pen Testing',type:'security'},{name:'OWASP Top 10',type:'security'},{name:'OWASP LLM Top 10',type:'security'},
-    {name:'MITRE ATT&CK',type:'security'},{name:'Detection Engineering',type:'security'},{name:'Incident Response',type:'security'},
-    {name:'Threat Hunting',type:'security'},{name:'Entra ID / OAuth',type:'security'},{name:'Digital Forensics',type:'security'},
-    {name:'Adversarial ML',type:'security'},{name:'CTF / Exploitation',type:'security'},{name:'DNS / SPF / DKIM',type:'security'},
+    {name:'Pen Testing',type:'security'},{name:'OWASP Top 10',type:'security'},{name:'MITRE ATT&CK',type:'security'},
+    {name:'Detection Engineering',type:'security'},{name:'Incident Response',type:'security'},{name:'Threat Hunting',type:'security'},
+    {name:'Entra ID / OAuth',type:'security'},{name:'Digital Forensics',type:'security'},{name:'Adversarial ML',type:'security'},
     {name:'Python',type:'programming'},{name:'Rust',type:'programming'},{name:'C / C++',type:'programming'},
-    {name:'Java',type:'programming'},{name:'TypeScript',type:'programming'},{name:'JavaScript',type:'programming'},
-    {name:'PowerShell / KQL',type:'programming'},{name:'SQL',type:'programming'},{name:'Bash',type:'programming'},
-    {name:'PyTorch',type:'programming'},{name:'XGBoost',type:'programming'},{name:'Scikit-learn',type:'programming'},
-    {name:'SHAP / LIME',type:'programming'},{name:'ONNX Runtime',type:'programming'},{name:'YOLOv8',type:'programming'},
-    {name:'FastAPI',type:'programming'},{name:'React',type:'programming'},{name:'Docker',type:'programming'},
-    {name:'GitHub Actions',type:'programming'},{name:'AWS',type:'programming'},{name:'Alibaba Cloud',type:'programming'},
-    {name:'Linux',type:'programming'},{name:'Git',type:'programming'},{name:'Playwright',type:'programming'},
+    {name:'Java',type:'programming'},{name:'TypeScript',type:'programming'},{name:'PowerShell / KQL',type:'programming'},
+    {name:'SQL',type:'programming'},{name:'Bash',type:'programming'},{name:'PyTorch',type:'programming'},
+    {name:'XGBoost',type:'programming'},{name:'SHAP / LIME',type:'programming'},{name:'ONNX Runtime',type:'programming'},
+    {name:'YOLOv8',type:'programming'},{name:'FastAPI',type:'programming'},{name:'React',type:'programming'},
+    {name:'Docker',type:'programming'},{name:'GitHub Actions',type:'programming'},{name:'AWS',type:'programming'},
     {name:'Research Writing',type:'soft'},{name:'Problem-Solving',type:'soft'},{name:'Team Work',type:'soft'},
-    {name:'Communication',type:'soft'},{name:'Adaptability',type:'soft'},{name:'Project Management',type:'soft'},
+    {name:'Communication',type:'soft'},
   ];
 
   const N = skills.length;
@@ -397,7 +394,7 @@ const PROJECTS = [
     code:'https://github.com/MohammadThabetHassan/TokenAbuse-Azure', codeLabel:'Write-up'
   },
   {
-    title:'Facts Only', cats:['AI/ML','Web'], lang:'JavaScript', year:'2026',
+    title:'Facts Only', cats:['AI/ML','Security'], lang:'JavaScript', year:'2026',
     image:'img/projects/facts-only.webp', alt:'Facts Only report flagging one source in an AI answer as likely planted',
     desc:'Browser extension and web app that flags paid or planted sources in AI chatbot answers. Shows evidence, never a true-or-false verdict. English and Arabic, zero dependencies, 174 offline checks.',
     facts:['0 false positives / 209 publishers','English + Arabic (RTL)','Zero dependencies'],
@@ -413,7 +410,7 @@ const PROJECTS = [
     code:'https://github.com/MohammadThabetHassan/bcs407-campus-safety', demo:'https://campussafety.eu.cc'
   },
   {
-    title:'Odoo AI Helpdesk Triage', cats:['AI/ML','Tools'], lang:'Python', year:'2026',
+    title:'Odoo AI Helpdesk Triage', cats:['AI/ML'], lang:'Python', year:'2026',
     image:'img/projects/odoo-helpdesk.webp', alt:'GitHub Actions history for the Odoo AI helpdesk triage add-on, every run passing',
     desc:'Odoo 19 add-on that turns Claude into a guarded first-line helpdesk agent: triage, routing and tool-use resolution behind cost caps, rate limits, circuit breakers and a human final say. Per-tool audit trail, safety gates and 74 tests.',
     facts:['Cost caps + circuit breakers','Per-tool audit trail','74 tests'],
@@ -588,6 +585,60 @@ if(!prefersReducedMotion && typeof gsap!=='undefined'){
       scrollTrigger:{ trigger:el, start:'top 88%' }
     });
   });
+}
+
+/* ── Copy BibTeX ── */
+const BIBTEX = {
+  1: `@inproceedings{thabet2025smartinject,
+  author    = {Thabet, M. and Satrya, G. B. and Kermani, A.},
+  title     = {SmartInject: Automated SQL Injection Testing Using Deep Q-Learning and LSTM-Based Payload Generation},
+  booktitle = {Proc. 2025 2nd Int. Conf. on Artificial Intelligence, Metaverse, and Cybersecurity (ICAMAC)},
+  address   = {Dubai, UAE},
+  year      = {2025},
+  month     = oct,
+  pages     = {1--6},
+  doi       = {10.1109/ICAMAC67779.2025.11398683}
+}`,
+  2: `@inproceedings{thabethassan2026lightweight,
+  author    = {Thabet Hassan, M. and Sadek, F. and Sami, A. and Kermani Kolankeh, A.},
+  title     = {Lightweight Voice Deepfake Detection for Smart Mobility Using Multi-Feature Ensemble Learning},
+  booktitle = {Proc. 2026 IEEE Int. Conf. on Smart Mobility (SM)},
+  address   = {Al Alamein, Egypt},
+  year      = {2026},
+  month     = may,
+  pages     = {1--2},
+  doi       = {10.1109/SM69703.2026.11614145}
+}`,
+  3: `@inproceedings{thabethassan2026ota,
+  author    = {Thabet Hassan, M. and Alraas, O. and AbuSerrieh, L. A.},
+  title     = {OTA Update-Channel Compromise Risk in Smart Mobility: A Testbed Comparing Governance and Cryptographic Controls},
+  booktitle = {Proc. 2026 IEEE Int. Conf. on Smart Mobility (SM)},
+  address   = {Al Alamein, Egypt},
+  year      = {2026},
+  month     = may,
+  pages     = {1--2},
+  doi       = {10.1109/SM69703.2026.11614128}
+}`
+};
+document.querySelectorAll('.pub-copy').forEach(btn=>{
+  const original = btn.textContent;
+  btn.addEventListener('click',()=>{
+    const text = BIBTEX[btn.dataset.bib];
+    if(!text) return;
+    const done = ()=>{
+      btn.textContent = 'Copied ✓'; btn.classList.add('is-done');
+      setTimeout(()=>{ btn.textContent = original; btn.classList.remove('is-done'); }, 1800);
+    };
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(done, ()=>fallbackCopy(text, done));
+    } else { fallbackCopy(text, done); }
+  });
+});
+function fallbackCopy(text, done){
+  const ta=document.createElement('textarea'); ta.value=text; ta.setAttribute('readonly','');
+  ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select();
+  try{ document.execCommand('copy'); done(); }catch(err){ /* leave the text selectable */ }
+  document.body.removeChild(ta);
 }
 
 /* ── Contact Form ── */

@@ -36,7 +36,7 @@
       "name": "Cybersecurity Professional Certificate",
       "issuer": "Google",
       "issuerKey": "Google",
-      "meta": "8 courses · Coursera",
+      "meta": "8 courses · Coursera · June 2023",
       "image": "img/certs/google-cybersecurity.webp",
       "verify": "https://www.coursera.org/account/accomplishments/professional-cert/2A2DCLQHM86N",
       "category": "cybersecurity"
@@ -54,7 +54,7 @@
       "name": "Ethical Hacking Essentials",
       "issuer": "EC-Council",
       "issuerKey": "ECCouncil",
-      "meta": "Coursera",
+      "meta": "Coursera · August 2024",
       "image": "img/certs/ec-council-ethical-hacking-essentials.webp",
       "verify": "https://www.coursera.org/account/accomplishments/verify/A5P76UHQYRKE",
       "category": "cybersecurity"
@@ -63,7 +63,7 @@
       "name": "Advanced Exploitation and Scripting Techniques",
       "issuer": "Packt",
       "issuerKey": "Packt",
-      "meta": "Coursera",
+      "meta": "Coursera · December 2024",
       "image": "img/certs/packt-advanced-exploitation.webp",
       "verify": "https://www.coursera.org/account/accomplishments/verify/06F9BS5LMVSD",
       "category": "cybersecurity"
@@ -81,7 +81,7 @@
       "name": "Introduction to Networks and Cisco Devices",
       "issuer": "Coursera Project Network",
       "issuerKey": "Coursera",
-      "meta": "Guided project · January 2024",
+      "meta": "Guided project · Coursera · January 2024",
       "image": "img/certs/cisco-networks-devices.webp",
       "verify": "https://www.coursera.org/account/accomplishments/verify/BBRN5D4AU8BN",
       "category": "cybersecurity"
@@ -90,7 +90,7 @@
       "name": "Technical Support Fundamentals",
       "issuer": "Google",
       "issuerKey": "Google",
-      "meta": "Coursera",
+      "meta": "Coursera · February 2023",
       "image": "img/certs/google-it-support-fundamentals.webp",
       "verify": "https://www.coursera.org/account/accomplishments/verify/WFVKJ58L2J3F",
       "category": "cybersecurity"
@@ -117,7 +117,7 @@
       "name": "Introduction to Java and Object-Oriented Programming",
       "issuer": "UPenn",
       "issuerKey": "UPenn",
-      "meta": "Coursera",
+      "meta": "Coursera · May 2023",
       "image": "img/certs/upenn-java-oop.webp",
       "verify": "https://www.coursera.org/account/accomplishments/verify/EGEAL2483HMK",
       "category": "programming"
@@ -126,7 +126,7 @@
       "name": "Crash Course on Python",
       "issuer": "Google",
       "issuerKey": "Google",
-      "meta": "Coursera",
+      "meta": "Coursera · February 2023",
       "image": "img/certs/google-python.webp",
       "verify": "https://www.coursera.org/account/accomplishments/verify/6KBS9M2RM7DW",
       "category": "programming"
@@ -135,7 +135,7 @@
       "name": "Introduction to Android Mobile Application Development",
       "issuer": "Meta",
       "issuerKey": "Meta",
-      "meta": "Coursera",
+      "meta": "Coursera · February 2023",
       "image": "img/certs/meta-android.webp",
       "verify": "https://www.coursera.org/account/accomplishments/verify/QXNKHJXJCYQN",
       "category": "programming"
@@ -153,7 +153,7 @@
       "name": "Data Structures",
       "issuer": "UC San Diego",
       "issuerKey": "UCSD",
-      "meta": "Coursera",
+      "meta": "Coursera · July 2024",
       "image": "img/certs/ucsd-data-structures.webp",
       "verify": "https://coursera.org/verify/8KNDAUQFXLQL",
       "category": "programming"
@@ -162,7 +162,7 @@
       "name": "Foundations of User Experience (UX) Design",
       "issuer": "Google",
       "issuerKey": "Google",
-      "meta": "Coursera",
+      "meta": "Coursera · February 2023",
       "image": "img/certs/google-ux-design.webp",
       "verify": "https://www.coursera.org/account/accomplishments/verify/9MYE7E6GYT2N",
       "category": "programming"
@@ -171,7 +171,7 @@
       "name": "Introduction to Databases",
       "issuer": "Meta",
       "issuerKey": "Meta",
-      "meta": "Coursera",
+      "meta": "Coursera · January 2025",
       "image": "img/certs/meta-databases.webp",
       "verify": "https://www.coursera.org/account/accomplishments/verify/5ODN2WN5FVU6",
       "category": "programming"
@@ -189,7 +189,7 @@
       "name": "Data Analysis and Visualization with Power BI",
       "issuer": "Udacity",
       "issuerKey": "Udacity",
-      "meta": "Nanodegree",
+      "meta": "Nanodegree · October 2023",
       "image": "img/certs/udacity-power-bi.webp",
       "verify": "https://www.udacity.com/certificate/e/11f16326-4c8c-11ee-901e-ef36537b847b",
       "category": "data"
