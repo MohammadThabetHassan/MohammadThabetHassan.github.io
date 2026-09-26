@@ -1,24 +1,20 @@
 {
-  "name": " ",
-  "version": "0.0.1",
-  "description": "",
+  "name": "mohammadthabethassan.github.io",
+  "version": "2.0.0",
+  "description": "Portfolio of Mohammad Thabet Hassan, served by GitHub Pages.",
   "private": true,
-  "keywords": [
-    ""
-  ],
-  "license": "",
-  "author": "",
-  "scripts": {
-    "test": "node --test tests/site-smoke.test.js",
-    "start": "webpack serve --open --config webpack.config.dev.js",
-    "build": "webpack --config webpack.config.prod.js"
+  "license": "MIT",
+  "author": "Mohammad Thabet Hassan",
+  "homepage": "https://mohammadthabethassan.github.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io.git"
   },
-  "devDependencies": {
-    "copy-webpack-plugin": "^11.0.0",
-    "html-webpack-plugin": "^5.6.0",
-    "webpack": "^5.91.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4",
-    "webpack-merge": "^5.10.0"
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node scripts/serve.js",
+    "test": "node --test"
   }
 }

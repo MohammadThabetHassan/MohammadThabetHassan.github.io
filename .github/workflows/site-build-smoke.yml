@@ -1,25 +1,17 @@
-name: Portfolio site build
+name: Site checks
 
 on:
+  push:
+    branches: [main]
   pull_request:
-    paths:
-      - 'index.html'
-      - 'css/**'
-      - 'js/**'
-      - 'img/**'
-      - 'package.json'
-      - 'package-lock.json'
-      - 'webpack*.js'
-      - 'tests/**'
-      - '.github/workflows/site-build-smoke.yml'
   workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  build:
-    name: Production build
+  test:
+    name: Links, assets and content
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -29,16 +21,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
 
-      - name: Install locked dependencies
-        run: npm ci
-
-      - name: Run site smoke tests
+      - name: Run site tests
         run: npm test
-
-      - name: Build production bundle
-        run: npm run build
-
-      - name: Check build output
-        run: test -d dist && test -f dist/index.html
