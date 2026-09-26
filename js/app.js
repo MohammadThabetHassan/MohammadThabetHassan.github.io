@@ -18,16 +18,28 @@ const prefersReducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matc
   const area = innerWidth * innerHeight;
   const N = Math.round(Math.min(9000, Math.max(3500, area / 240)));
   const particles = new THREE.Group();
+  // Points render as squares unless they get a texture: use a small round,
+  // soft-edged sprite so every star is a dot.
+  const starTex = (function(){
+    const c = document.createElement('canvas'); c.width = c.height = 64;
+    const g = c.getContext('2d');
+    const grad = g.createRadialGradient(32, 32, 0, 32, 32, 32);
+    grad.addColorStop(0, 'rgba(255,255,255,1)');
+    grad.addColorStop(0.5, 'rgba(255,255,255,0.9)');
+    grad.addColorStop(1, 'rgba(255,255,255,0)');
+    g.fillStyle = grad; g.fillRect(0, 0, 64, 64);
+    return new THREE.CanvasTexture(c);
+  })();
   function starLayer(count, size, opacity){
     const pos = new Float32Array(count * 3);
     for(let i=0;i<count*3;i++) pos[i] = (Math.random()-0.5)*30;
     const geo = new THREE.BufferGeometry();
     geo.setAttribute('position', new THREE.BufferAttribute(pos,3));
-    const mat = new THREE.PointsMaterial({ color:0x00d4ff, size, transparent:true, opacity });
+    const mat = new THREE.PointsMaterial({ color:0x00d4ff, size, map:starTex, transparent:true, opacity, depthWrite:false, alphaTest:0.01 });
     return new THREE.Points(geo, mat);
   }
-  particles.add(starLayer(N, 0.02, 0.55));
-  particles.add(starLayer(Math.round(N / 12), 0.05, 0.9));
+  particles.add(starLayer(N, 0.036, 0.8));
+  particles.add(starLayer(Math.round(N / 12), 0.08, 1));
   scene.add(particles);
 
   // Animations turned off (Windows "Animation effects", phone battery saver):
