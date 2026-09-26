@@ -11,7 +11,7 @@ This is a personal portfolio, so most changes come from me. Corrections are welc
 ## What to keep in mind
 
 - The site is plain HTML, CSS and JavaScript with no build step. Do not add a bundler, a framework or a runtime dependency.
-- The page must remain complete without JavaScript. Scripts add behaviour; they never hide content until they run.
+- Project cards and certificates are rendered by `js/app.js` from the `PROJECTS` array and `certs.json`, so a change to either must be checked in the browser, not only in the source.
 - Images go in `img/` as WebP. Project covers are 1200x675, badge images 320x320, certificate thumbnails 640px wide.
 - Links to other sites open in a new tab and carry `rel="noopener"`.
 - Do not change facts about me (dates, titles, results, author order) unless you can point to the source that shows the current text is wrong.
