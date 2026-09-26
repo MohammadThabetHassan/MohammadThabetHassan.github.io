@@ -101,6 +101,23 @@ test('publication DOIs are linked', () => {
   }
 });
 
+test('glitch intro has a hidden resting state so it can never stick on screen', () => {
+  const css = read('css/style.css');
+  assert.match(css, /\.glitch::before,\s*\.glitch::after \{[^}]*clip-path:\s*inset\(100% 0 0 0\)/);
+  assert.doesNotMatch(css, /\.glitch::(?:before|after) \{[^}]*animation-fill-mode:\s*forwards/);
+  assert.match(css, /prefers-reduced-motion: reduce\)[\s\S]*?\.glitch::before, \.glitch::after \{ animation: none !important; \}/);
+});
+
+test('starfield still renders when animations are turned off', () => {
+  assert.doesNotMatch(app, /initBG\(\)\{\s*if\(prefersReducedMotion\) return;/);
+  assert.match(app, /if\(prefersReducedMotion\)\{\s*particles\.rotation\.set/);
+});
+
+test('stylesheet and script links are versioned for cache busting', () => {
+  assert.match(index, /href="css\/style\.css\?v=\d+"/);
+  assert.match(index, /src="js\/app\.js\?v=\d+"/);
+});
+
 test('security and contribution guidance are published', () => {
   assert.match(read('SECURITY.md'), /report/i);
   assert.match(read('CONTRIBUTING.md'), /pull request/i);

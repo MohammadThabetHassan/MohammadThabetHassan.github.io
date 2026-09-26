@@ -5,7 +5,7 @@ const prefersReducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matc
 
 /* ── Three.js Background ── */
 (function initBG(){
-  if(prefersReducedMotion) return;
+  if(typeof THREE === 'undefined') return;
   const canvas = document.getElementById('bg-canvas');
   const scene  = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(75, innerWidth/innerHeight, 0.1, 1000);
@@ -29,6 +29,20 @@ const prefersReducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matc
   particles.add(starLayer(N, 0.02, 0.55));
   particles.add(starLayer(Math.round(N / 12), 0.05, 0.9));
   scene.add(particles);
+
+  // Animations turned off (Windows "Animation effects", phone battery saver):
+  // keep the starfield, but draw it once instead of moving it.
+  if(prefersReducedMotion){
+    particles.rotation.set(0.12, 0.4, 0.05);
+    renderer.render(scene, camera);
+    window.addEventListener('resize',()=>{
+      camera.aspect = innerWidth/innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(innerWidth, innerHeight);
+      renderer.render(scene, camera);
+    });
+    return;
+  }
 
   let tX=0, tY=0;
   document.addEventListener('mousemove', e=>{
