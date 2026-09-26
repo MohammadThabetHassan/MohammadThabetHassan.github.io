@@ -1,12 +1,13 @@
 {
-  "short_name": "",
-  "name": "",
-  "icons": [{
-    "src": "icon.png",
-    "type": "image/png",
-    "sizes": "192x192"
-  }],
-  "start_url": "/?utm_source=homescreen",
-  "background_color": "#fafafa",
-  "theme_color": "#fafafa"
+  "name": "Mohammad Thabet Hassan",
+  "short_name": "M. Thabet Hassan",
+  "description": "Cybersecurity researcher in Dubai: AI security, detection engineering and offensive research.",
+  "icons": [
+    { "src": "icon.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ],
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#020408",
+  "theme_color": "#00d4ff"
 }

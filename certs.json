@@ -1,131 +1,198 @@
 {
   "badges": [
     {
-      "name": "GitHub Foundations",
-      "image": "https://github.com/user-attachments/assets/effd0f1b-c611-4269-ac37-6b7d0d794d98",
-      "url": "https://www.credly.com/badges/4c1c7cb6-0ac1-4a05-b4a6-1b24473ca384/public_url"
+      "name": "AWS Cloud Quest: Security",
+      "issuer": "AWS Training and Certification",
+      "image": "img/badges/aws-cloud-quest-security.webp",
+      "url": "https://www.credly.com/badges/6fb9dabe-47f1-40f0-b826-7f294a4bd0fd/public_url"
     },
     {
-      "name": "OPSWAT ICIP",
-      "image": "https://github.com/user-attachments/assets/0990b8f9-8a53-4341-8e70-7e67aa36f949",
-      "url": "https://www.credly.com/badges/bc8a3f43-167d-4d01-8977-6726233959a8/public_url"
-    },
-    {
-      "name": "AWS Cloud 101",
-      "image": "https://github.com/user-attachments/assets/242f3b14-982d-4c8b-971b-99a22ffeb77c",
+      "name": "AWS Educate: Cloud Computing 101",
+      "issuer": "AWS Training and Certification",
+      "image": "img/badges/aws-cloud-101.webp",
       "url": "https://www.credly.com/badges/0081edcf-1f16-4a5e-8228-80f3ebbc1ec4/public_url"
     },
     {
+      "name": "Introduction to Critical Infrastructure Protection (ICIP)",
+      "issuer": "OPSWAT Academy · expired",
+      "image": "img/badges/opswat-icip.webp",
+      "url": "https://www.credly.com/badges/bc8a3f43-167d-4d01-8977-6726233959a8/public_url"
+    },
+    {
       "name": "Introduction to Modern AI",
-      "image": "https://github.com/user-attachments/assets/351621b8-f5de-401a-89db-4d3a1f67ae4e",
+      "issuer": "Cisco Networking Academy",
+      "image": "img/badges/intro-modern-ai.webp",
       "url": "https://www.credly.com/badges/d8a65f22-094a-4622-a6e2-7b6d49404744/public_url"
+    },
+    {
+      "name": "GitHub Foundations",
+      "issuer": "GitHub",
+      "image": "img/badges/github-foundations.webp",
+      "url": "https://www.credly.com/badges/4c1c7cb6-0ac1-4a05-b4a6-1b24473ca384/public_url"
     }
   ],
   "certifications": [
     {
       "name": "Cybersecurity Professional Certificate",
       "issuer": "Google",
-      "image": "img/cert7.jpg",
+      "issuerKey": "Google",
+      "meta": "8 courses · Coursera",
+      "image": "img/certs/google-cybersecurity.webp",
       "verify": "https://www.coursera.org/account/accomplishments/professional-cert/2A2DCLQHM86N",
       "category": "cybersecurity"
     },
     {
-      "name": "Technical Support Fundamentals",
-      "issuer": "Google",
-      "image": "img/cert1.jpg",
-      "verify": "https://www.coursera.org/account/accomplishments/verify/WFVKJ58L2J3F",
-      "category": "cybersecurity"
-    },
-    {
-      "name": "Intro to Networks & Cisco Devices",
-      "issuer": "Cisco",
-      "image": "img/cert10.jpg",
-      "verify": "https://www.coursera.org/account/accomplishments/verify/BBRN5D4AU8BN",
+      "name": "Ethical Hacker",
+      "issuer": "Cisco Networking Academy",
+      "issuerKey": "Cisco",
+      "meta": "Through Canadian University of Dubai · May 2026",
+      "image": "img/certs/cisco-ethical-hacker.webp",
+      "verify": "",
       "category": "cybersecurity"
     },
     {
       "name": "Ethical Hacking Essentials",
       "issuer": "EC-Council",
-      "image": "img/cert12.jpg",
+      "issuerKey": "ECCouncil",
+      "meta": "Coursera",
+      "image": "img/certs/ec-council-ethical-hacking-essentials.webp",
       "verify": "https://www.coursera.org/account/accomplishments/verify/A5P76UHQYRKE",
       "category": "cybersecurity"
     },
     {
-      "name": "Cybersecurity Bootcamp",
-      "issuer": "Nomu Al Ghurair",
-      "image": "img/cert13.jpg",
+      "name": "Advanced Exploitation and Scripting Techniques",
+      "issuer": "Packt",
+      "issuerKey": "Packt",
+      "meta": "Coursera",
+      "image": "img/certs/packt-advanced-exploitation.webp",
+      "verify": "https://www.coursera.org/account/accomplishments/verify/06F9BS5LMVSD",
+      "category": "cybersecurity"
+    },
+    {
+      "name": "Nomu Digital Bootcamp: Cybersecurity",
+      "issuer": "Abdulla Al Ghurair Foundation",
+      "issuerKey": "Nomu",
+      "meta": "With Sprints · February 2025",
+      "image": "img/certs/nomu-al-ghurair-bootcamp.webp",
       "verify": "",
       "category": "cybersecurity"
     },
     {
-      "name": "Intro to Java & OOP",
+      "name": "Introduction to Networks and Cisco Devices",
+      "issuer": "Coursera Project Network",
+      "issuerKey": "Coursera",
+      "meta": "Guided project · January 2024",
+      "image": "img/certs/cisco-networks-devices.webp",
+      "verify": "https://www.coursera.org/account/accomplishments/verify/BBRN5D4AU8BN",
+      "category": "cybersecurity"
+    },
+    {
+      "name": "Technical Support Fundamentals",
+      "issuer": "Google",
+      "issuerKey": "Google",
+      "meta": "Coursera",
+      "image": "img/certs/google-it-support-fundamentals.webp",
+      "verify": "https://www.coursera.org/account/accomplishments/verify/WFVKJ58L2J3F",
+      "category": "cybersecurity"
+    },
+    {
+      "name": "Google AI Professional Certificate",
+      "issuer": "Google",
+      "issuerKey": "Google",
+      "meta": "7 courses · Coursera · April 2026",
+      "image": "img/certs/google-ai-professional.webp",
+      "verify": "https://coursera.org/share/0e2f9a552feeee35045f4c56cc3463a7",
+      "category": "ai"
+    },
+    {
+      "name": "Build Real-World AI Apps with LangChain and RAG",
+      "issuer": "Coursera",
+      "issuerKey": "Coursera",
+      "meta": "Courses by IBM and Scrimba",
+      "image": "img/certs/coursera-langchain-rag.webp",
+      "verify": "https://coursera.org/share/0250fc5acfa2d285380f66353c74d48a",
+      "category": "ai"
+    },
+    {
+      "name": "Introduction to Java and Object-Oriented Programming",
       "issuer": "UPenn",
-      "image": "img/cert5.jpg",
+      "issuerKey": "UPenn",
+      "meta": "Coursera",
+      "image": "img/certs/upenn-java-oop.webp",
       "verify": "https://www.coursera.org/account/accomplishments/verify/EGEAL2483HMK",
       "category": "programming"
     },
     {
       "name": "Crash Course on Python",
       "issuer": "Google",
-      "image": "img/cert4.jpg",
+      "issuerKey": "Google",
+      "meta": "Coursera",
+      "image": "img/certs/google-python.webp",
       "verify": "https://www.coursera.org/account/accomplishments/verify/6KBS9M2RM7DW",
       "category": "programming"
     },
     {
-      "name": "Intro to Android App Dev",
+      "name": "Introduction to Android Mobile Application Development",
       "issuer": "Meta",
-      "image": "img/cert2.jpg",
+      "issuerKey": "Meta",
+      "meta": "Coursera",
+      "image": "img/certs/meta-android.webp",
       "verify": "https://www.coursera.org/account/accomplishments/verify/QXNKHJXJCYQN",
       "category": "programming"
     },
     {
-      "name": "HTML CSS JavaScript",
-      "issuer": "U of London",
-      "image": "img/cert6.jpg",
+      "name": "Responsive Website Basics: Code with HTML, CSS, and JavaScript",
+      "issuer": "University of London",
+      "issuerKey": "London",
+      "meta": "Coursera · July 2024",
+      "image": "img/certs/london-html-css-js.webp",
       "verify": "https://www.coursera.org/account/accomplishments/verify/7F7LGMUVY9Z9",
       "category": "programming"
     },
     {
       "name": "Data Structures",
       "issuer": "UC San Diego",
-      "image": "img/cert11.jpg",
+      "issuerKey": "UCSD",
+      "meta": "Coursera",
+      "image": "img/certs/ucsd-data-structures.webp",
       "verify": "https://coursera.org/verify/8KNDAUQFXLQL",
       "category": "programming"
     },
     {
-      "name": "UX Design Foundations",
+      "name": "Foundations of User Experience (UX) Design",
       "issuer": "Google",
-      "image": "img/cert3.jpg",
+      "issuerKey": "Google",
+      "meta": "Coursera",
+      "image": "img/certs/google-ux-design.webp",
       "verify": "https://www.coursera.org/account/accomplishments/verify/9MYE7E6GYT2N",
       "category": "programming"
     },
     {
       "name": "Introduction to Databases",
       "issuer": "Meta",
-      "image": "img/cert14.jpg",
+      "issuerKey": "Meta",
+      "meta": "Coursera",
+      "image": "img/certs/meta-databases.webp",
       "verify": "https://www.coursera.org/account/accomplishments/verify/5ODN2WN5FVU6",
       "category": "programming"
     },
     {
       "name": "Data Analysis Fundamentals",
       "issuer": "Udacity",
-      "image": "img/cert8.jpg",
+      "issuerKey": "Udacity",
+      "meta": "Certificate of completion · August 2023 · with the Abdulla Al Ghurair Foundation",
+      "image": "img/certs/udacity-data-analysis.webp",
       "verify": "",
       "category": "data"
     },
     {
-      "name": "Data Analysis & Visualization — Power BI",
+      "name": "Data Analysis and Visualization with Power BI",
       "issuer": "Udacity",
-      "image": "img/cert9.jpg",
+      "issuerKey": "Udacity",
+      "meta": "Nanodegree",
+      "image": "img/certs/udacity-power-bi.webp",
       "verify": "https://www.udacity.com/certificate/e/11f16326-4c8c-11ee-901e-ef36537b847b",
       "category": "data"
-    },
-    {
-      "name": "Advanced Exploitation and Scripting Techniques",
-      "issuer": "Packt",
-      "image": "img/cert15.jpg",
-      "verify": "https://www.coursera.org/account/accomplishments/verify/06F9BS5LMVSD",
-      "category": "cybersecurity"
     }
   ]
 }
