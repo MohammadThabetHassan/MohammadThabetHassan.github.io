@@ -1,6 +1,12 @@
 {
   "badges": [
     {
+      "name": "Ethical Hacker",
+      "issuer": "Cisco Networking Academy",
+      "image": "img/badges/cisco-ethical-hacker.webp",
+      "url": "https://www.credly.com/badges/0917eb89-0ecf-438c-bb3c-41f44fe42311/public_url"
+    },
+    {
       "name": "AWS Cloud Quest: Security",
       "issuer": "AWS Training and Certification",
       "image": "img/badges/aws-cloud-quest-security.webp",
@@ -47,7 +53,7 @@
       "issuerKey": "Cisco",
       "meta": "Through Canadian University of Dubai · May 2026",
       "image": "img/certs/cisco-ethical-hacker.webp",
-      "verify": "",
+      "verify": "https://www.credly.com/badges/0917eb89-0ecf-438c-bb3c-41f44fe42311/public_url",
       "category": "cybersecurity"
     },
     {

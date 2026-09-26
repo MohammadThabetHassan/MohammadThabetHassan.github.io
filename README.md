@@ -32,7 +32,7 @@ scripts/serve.js    local preview server
 | 03 | Projects | Ten project cards with real screenshots and a category filter, plus links to more repositories |
 | 04 | Research | Three IEEE papers with DOIs and one manuscript in preparation |
 | 05 | Achievements | Competition timeline |
-| 06 | Certifications | Five Credly badges and eighteen certificates with a category filter |
+| 06 | Certifications | Six Credly badges and eighteen certificates with a category filter |
 | 07 | Contact | Email, LinkedIn, GitHub, phone, and a form that opens your mail app |
 
 ## Local preview
