@@ -83,6 +83,10 @@ Copy one `<article class="pub-card">` block in the `#publications` section of `i
 
 Copy one `<div class="t-item">` block in the `#achievements` timeline and update the icon, title, text and year.
 
+### After changing the stylesheet or script
+
+GitHub Pages tells browsers to cache files for ten minutes. `index.html` and `404.html` link `css/style.css?v=N` and `js/app.js?v=N`; raise `N` whenever you change either file so visitors get the new version immediately instead of a mix of old and new.
+
 ### Update the CV
 
 Replace `cv.pdf`. The hero button downloads it as `Mohammad_Thabet_Hassan_CV.pdf`.
