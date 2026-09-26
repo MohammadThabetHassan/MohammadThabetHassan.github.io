@@ -1,26 +1,7 @@
 [
   {
-    "name": "MohammadThabetHassan.github.io",
-    "description": "Cybersecurity and AI/ML security portfolio — research, publications, verified projects, CTF awards, and technical evidence.",
-    "language": "HTML",
-    "topics": [
-      "ai-security",
-      "cybersecurity",
-      "github-pages",
-      "machine-learning",
-      "portfolio",
-      "red-team",
-      "research",
-      "soc"
-    ],
-    "stargazers_count": 0,
-    "updated_at": "2026-09-26T04:00:55Z",
-    "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
-    "homepage": "https://mohammadthabethassan.github.io"
-  },
-  {
     "name": "VoiceGuard",
-    "description": "Real-time voice deepfake detection, synthesis watermarking & vishing defence — XLS-R + AASIST (2.84% EER, v9c) that also catches modern voice clones & premium TTS. Explainable, edge-ready (0.62 MB ONNX), with an IPED forensic add-on. FastAPI + React. IEEE SM2026.",
+    "description": "Real-time voice deepfake detection, watermarking & vishing defence (team project, CUD). Server model XLS-R + AASIST (2.84% EER, ASVspoof 2021 LA); separate 0.62 MB ONNX edge model (8.47% EER). Explainable, IPED add-on, FastAPI + React.",
     "language": "Python",
     "topics": [
       "aasist",
@@ -41,13 +22,30 @@
       "xls-r"
     ],
     "stargazers_count": 4,
-    "updated_at": "2026-09-22T04:25:44Z",
+    "updated_at": "2026-09-26T10:42:16Z",
     "html_url": "https://github.com/MohammadThabetHassan/VoiceGuard",
-    "homepage": "https://voice-guard.tech"
+    "homepage": ""
+  },
+  {
+    "name": "TokenAbuse-Azure",
+    "description": "Walkthrough of an authorized cloud red-team CTF I solved: OAuth device-code phishing, token theft, Microsoft Graph and SharePoint enumeration, exfiltration. Plus the KQL hunts and Conditional Access policy that catch it.",
+    "language": "PowerShell",
+    "topics": [
+      "ctf-writeup",
+      "device-code-phishing",
+      "entra-id",
+      "kql",
+      "microsoft-sentinel",
+      "threat-hunting"
+    ],
+    "stargazers_count": 1,
+    "updated_at": "2026-09-26T10:41:56Z",
+    "html_url": "https://github.com/MohammadThabetHassan/TokenAbuse-Azure",
+    "homepage": ""
   },
   {
     "name": "trustweave",
-    "description": "Review your AI agent’s security configuration before deployment. Emphasizes local, deterministic setup under Apache-2.0 license.",
+    "description": "Static security review for AI agent configs (LangGraph, CrewAI, OpenAI Agents, MCP): maps source-to-tool flows and flags untrusted input that can reach privileged actions. Runs locally, no network, no agent execution.",
     "language": "Python",
     "topics": [
       "agent-security",
@@ -62,19 +60,99 @@
       "static-analysis"
     ],
     "stargazers_count": 5,
-    "updated_at": "2026-09-21T15:36:28Z",
+    "updated_at": "2026-09-26T10:41:55Z",
     "html_url": "https://github.com/MohammadThabetHassan/trustweave",
-    "homepage": ""
+    "homepage": "https://mohammadthabethassan.github.io/trustweave/"
+  },
+  {
+    "name": "bcs407-campus-safety",
+    "description": "Real-time YOLOv8m detector for 4 campus safety objects (wet-floor signs, fire alarms, exit signs, helmets). BCS407 course project at CUD; runs in the browser via ONNX Runtime Web.",
+    "language": "Python",
+    "topics": [
+      "class-imbalance",
+      "computer-vision",
+      "object-detection",
+      "onnx",
+      "onnxruntime-web",
+      "yolov8"
+    ],
+    "stargazers_count": 0,
+    "updated_at": "2026-09-26T10:41:54Z",
+    "html_url": "https://github.com/MohammadThabetHassan/bcs407-campus-safety",
+    "homepage": "https://campussafety.eu.cc"
   },
   {
     "name": "facts-only",
-    "description": "No description provided.",
+    "description": "Browser extension and web app that flags paid or planted sources in AI chatbot answers. Evidence, never a true/false verdict. English and Arabic.",
     "language": "JavaScript",
-    "topics": [],
+    "topics": [
+      "browser-extension",
+      "fact-checking",
+      "generative-engine-optimization",
+      "influence-operations",
+      "llm",
+      "misinformation",
+      "osint",
+      "trust-and-safety"
+    ],
     "stargazers_count": 1,
-    "updated_at": "2026-09-08T16:40:16Z",
+    "updated_at": "2026-09-26T10:41:52Z",
     "html_url": "https://github.com/MohammadThabetHassan/facts-only",
+    "homepage": "https://mohammadthabethassan.github.io/facts-only/webapp/index.html?demo=1"
+  },
+  {
+    "name": "disktrace",
+    "description": "Local-first forensic data recovery for disk images, with explicit evidence boundaries.",
+    "language": "Rust",
+    "topics": [
+      "chain-of-custody",
+      "data-carving",
+      "dfir",
+      "digital-forensics",
+      "egui",
+      "file-recovery",
+      "rust"
+    ],
+    "stargazers_count": 0,
+    "updated_at": "2026-09-26T10:41:06Z",
+    "html_url": "https://github.com/MohammadThabetHassan/disktrace",
     "homepage": ""
+  },
+  {
+    "name": "odoo-ai-helpdesk-triage",
+    "description": "Odoo 19 add-on that turns Claude into a guarded first-line helpdesk agent: triage, routing and tool-use resolution with cost caps, rate limits, circuit breakers and a human final say.",
+    "language": "Python",
+    "topics": [
+      "ai-agents",
+      "anthropic-claude",
+      "helpdesk",
+      "llm-security",
+      "odoo",
+      "odoo-19"
+    ],
+    "stargazers_count": 0,
+    "updated_at": "2026-09-26T10:41:04Z",
+    "html_url": "https://github.com/MohammadThabetHassan/odoo-ai-helpdesk-triage",
+    "homepage": ""
+  },
+  {
+    "name": "MohammadThabetHassan.github.io",
+    "description": "Cybersecurity and AI/ML security portfolio — research, publications, verified projects, CTF awards, and technical evidence.",
+    "language": "HTML",
+    "topics": [
+      "ai-security",
+      "cybersecurity",
+      "github-pages",
+      "machine-learning",
+      "portfolio",
+      "red-team",
+      "research",
+      "soc"
+    ],
+    "stargazers_count": 0,
+    "updated_at": "2026-09-26T10:25:28Z",
+    "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan.github.io",
+    "homepage": "https://mohammadthabethassan.github.io"
   },
   {
     "name": "mirage-soc-lab",
@@ -113,16 +191,6 @@
     "homepage": "https://mohammadthabethassan.github.io/xai-ids/"
   },
   {
-    "name": "disktrace",
-    "description": "Local-first forensic data recovery for disk images, with explicit evidence boundaries.",
-    "language": "Rust",
-    "topics": [],
-    "stargazers_count": 0,
-    "updated_at": "2026-09-03T11:05:38Z",
-    "html_url": "https://github.com/MohammadThabetHassan/disktrace",
-    "homepage": ""
-  },
-  {
     "name": "MohammadThabetHassan",
     "description": "No description provided.",
     "language": "Code",
@@ -130,16 +198,6 @@
     "stargazers_count": 1,
     "updated_at": "2026-08-12T18:56:30Z",
     "html_url": "https://github.com/MohammadThabetHassan/MohammadThabetHassan",
-    "homepage": ""
-  },
-  {
-    "name": "odoo-ai-helpdesk-triage",
-    "description": "No description provided.",
-    "language": "Python",
-    "topics": [],
-    "stargazers_count": 0,
-    "updated_at": "2026-07-03T12:00:09Z",
-    "html_url": "https://github.com/MohammadThabetHassan/odoo-ai-helpdesk-triage",
     "homepage": ""
   },
   {
@@ -160,26 +218,6 @@
     "stargazers_count": 0,
     "updated_at": "2026-06-29T15:38:14Z",
     "html_url": "https://github.com/MohammadThabetHassan/odoo-bootcamp",
-    "homepage": ""
-  },
-  {
-    "name": "TokenAbuse-Azure",
-    "description": "The TokenAbuse-Azure CTF challenge demonstrates how Microsoft Graph API extraction of OAuth tokens leads to SharePoint enumeration and sensitive file exfiltration. We used TokenTacticsV2 to take advantage of Device Code Authentication and misconfigured SharePoint permissions during the attack sequence to retrieve the final flag. 🚀",
-    "language": "PowerShell",
-    "topics": [],
-    "stargazers_count": 1,
-    "updated_at": "2026-06-12T09:54:20Z",
-    "html_url": "https://github.com/MohammadThabetHassan/TokenAbuse-Azure",
-    "homepage": ""
-  },
-  {
-    "name": "bcs407-campus-safety",
-    "description": "No description provided.",
-    "language": "Python",
-    "topics": [],
-    "stargazers_count": 0,
-    "updated_at": "2026-05-14T14:11:29Z",
-    "html_url": "https://github.com/MohammadThabetHassan/bcs407-campus-safety",
     "homepage": ""
   },
   {
