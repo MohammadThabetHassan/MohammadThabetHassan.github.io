@@ -403,14 +403,6 @@ const PROJECTS = [
     code:'https://github.com/MohammadThabetHassan/web-posture-check', pypi:'https://pypi.org/project/web-posture-check/'
   },
   {
-    title:'HackerVerse DFIR Write-up', cats:['Forensics','Security'], lang:'Markdown', year:'2026',
-    image:'img/projects/hackerverse-dfir.webp', alt:'EC-Council HackerVerse DFIR CTF certificate, level Grandmaster, issued 29 September 2026',
-    desc:'Step-by-step write-up of the EC-Council HackerVerse DFIR CTF: hidden data in audio and images, an intrusion rebuilt from a packet capture, a Chrome password recovered through LSASS and DPAPI, and a .NET ransomware key rebuilt from the machine name. Every level has its commands and a defensive note.',
-    facts:['2,000 of 2,000 points','27 challenges · 4 levels','Grandmaster level'],
-    topics:['dfir','ctf-writeup','malware-analysis','incident-response'],
-    code:'https://github.com/MohammadThabetHassan/HackerVerse-DFIR-2026', codeLabel:'Write-up'
-  },
-  {
     title:'VoiceGuard', cats:['Security','AI/ML'], lang:'Python', year:'2026',
     image:'img/projects/voiceguard.webp', alt:'VoiceGuard overview: real-time voice deepfake detection, 2.84% EER, 0.62 MB edge model',
     desc:'Real-time voice-deepfake detection, synthesis watermarking and vishing defence. XLS-R + AASIST server model, a separate 0.62 MB ONNX edge model, Integrated-Gradients explanations, C2PA-signed provenance and NIST SP 800-86-style forensic reports. Team project at CUD; the platform that grew out of paper [2].',
@@ -441,6 +433,14 @@ const PROJECTS = [
     facts:['Local-first · no telemetry','Machine-readable receipts','CodeQL + release CI'],
     topics:['dfir','data-carving','chain-of-custody','egui'],
     code:'https://github.com/MohammadThabetHassan/disktrace'
+  },
+  {
+    title:'HackerVerse DFIR Write-up', cats:['Forensics','Security'], lang:'Markdown', year:'2026',
+    image:'img/projects/hackerverse-dfir.webp', alt:'EC-Council HackerVerse DFIR CTF certificate, level Grandmaster, issued 29 September 2026',
+    desc:'Step-by-step write-up of the EC-Council HackerVerse DFIR CTF: hidden data in audio and images, an intrusion rebuilt from a packet capture, a Chrome password recovered through LSASS and DPAPI, and a .NET ransomware key rebuilt from the machine name. Every level has its commands and a defensive note.',
+    facts:['2,000 of 2,000 points','27 challenges · 4 levels','Grandmaster level'],
+    topics:['dfir','ctf-writeup','malware-analysis','incident-response'],
+    code:'https://github.com/MohammadThabetHassan/HackerVerse-DFIR-2026', codeLabel:'Write-up'
   },
   {
     title:'Facts Only', cats:['AI/ML','Security'], lang:'JavaScript', year:'2026',
