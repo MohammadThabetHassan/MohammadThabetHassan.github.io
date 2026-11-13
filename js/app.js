@@ -213,7 +213,7 @@ sectionTargets.forEach(s=>navObs.observe(s));
 /* ── Typewriter ── */
 (function initTypewriter(){
   const el = document.getElementById('tw-text');
-  const words = ['Cybersecurity Researcher','Ethical Hacker','AI Security Engineer','IEEE Author'];
+  const words = ['Penetration Testing','Detection Engineering','AI Security','IEEE First Author'];
   let wi=0, ci=0, deleting=false;
   function tick(){
     const word = words[wi];
@@ -379,10 +379,42 @@ if(aboutCard){
 /* ── Projects (curated; every card has a real screenshot from the repository) ── */
 const PROJECTS = [
   {
+    title:'TokenAbuse-Azure', cats:['Security','SOC'], lang:'PowerShell', year:'2026',
+    image:'img/projects/tokenabuse-azure.webp', alt:'TokenAbuse-Azure attack chain: device-code phishing, token theft, Graph and SharePoint enumeration, exfiltration',
+    desc:'Walkthrough of an authorised cloud red-team CTF: OAuth device-code phishing, token theft, Microsoft Graph and SharePoint enumeration, and exfiltration, without touching the perimeter. Paired with the KQL hunts and the Conditional Access policy that catch the chain.',
+    facts:['Entra ID / Microsoft 365','6 MITRE ATT&CK techniques','4 KQL hunts + Conditional Access policy'],
+    topics:['device-code-phishing','entra-id','kql','threat-hunting'],
+    code:'https://github.com/MohammadThabetHassan/TokenAbuse-Azure', codeLabel:'Write-up'
+  },
+  {
+    title:'MIRAGE SOC Lab', cats:['SOC','Security'], lang:'TypeScript', year:'2026',
+    image:'img/projects/mirage-soc-lab.webp', alt:'MIRAGE SOC Lab: controlled detection engineering and SOC training',
+    desc:'SOC detection lab on synthetic, deterministic telemetry, built with Abdulrahman Rezki. A rule will not load unless it names a benign and a boundary scenario it must stay quiet on, and a baseline regression test holds every rule to that. Analyst cases are mapped to MITRE ATT&CK. I wrote most of the detection engine.',
+    facts:['ATT&CK-mapped cases','Rule regression tests','Playwright end-to-end tests'],
+    topics:['detection-engineering','soc-lab','react','typescript'],
+    code:'https://github.com/MohammadThabetHassan/mirage-soc-lab', demo:'https://mohammadthabethassan.github.io/mirage-soc-lab/', demoLabel:'Overview'
+  },
+  {
+    title:'web-posture-check', cats:['Security','Tools'], lang:'Python', year:'2026',
+    image:'img/projects/web-posture-check.webp', alt:'Terminal: web-posture-check 0.2 passes an invalid HSTS header that version 0.4 fails and explains',
+    desc:'Command-line tool that grades a website\'s security posture from the outside: headers, cookies, CORS, TLS, CAA, security.txt, SPF, DMARC and DKIM. Its HSTS parsing was checked against a real Chrome on 35 headers, and it writes SARIF for GitHub code scanning. Built with Omar Alraas.',
+    facts:['20 checks in one command','Published on PyPI','GitHub Action + SARIF'],
+    topics:['security-headers','tls','email-security','github-action'],
+    code:'https://github.com/MohammadThabetHassan/web-posture-check', pypi:'https://pypi.org/project/web-posture-check/'
+  },
+  {
+    title:'HackerVerse DFIR Write-up', cats:['Forensics','Security'], lang:'Markdown', year:'2026',
+    image:'img/projects/hackerverse-dfir.webp', alt:'EC-Council HackerVerse DFIR CTF certificate, level Grandmaster, issued 29 September 2026',
+    desc:'Step-by-step write-up of the EC-Council HackerVerse DFIR CTF: hidden data in audio and images, an intrusion rebuilt from a packet capture, a Chrome password recovered through LSASS and DPAPI, and a .NET ransomware key rebuilt from the machine name. Every level has its commands and a defensive note.',
+    facts:['2,000 of 2,000 points','27 challenges · 4 levels','Grandmaster level'],
+    topics:['dfir','ctf-writeup','malware-analysis','incident-response'],
+    code:'https://github.com/MohammadThabetHassan/HackerVerse-DFIR-2026', codeLabel:'Write-up'
+  },
+  {
     title:'VoiceGuard', cats:['Security','AI/ML'], lang:'Python', year:'2026',
     image:'img/projects/voiceguard.webp', alt:'VoiceGuard overview: real-time voice deepfake detection, 2.84% EER, 0.62 MB edge model',
     desc:'Real-time voice-deepfake detection, synthesis watermarking and vishing defence. XLS-R + AASIST server model, a separate 0.62 MB ONNX edge model, Integrated-Gradients explanations, C2PA-signed provenance and NIST SP 800-86-style forensic reports. Team project at CUD; the platform that grew out of paper [2].',
-    facts:['2.84% EER · ASVspoof 2021 LA','0.62 MB edge model','FastAPI + React'],
+    facts:['2.84% EER · ASVspoof 2021 LA','Separate 0.62 MB edge model · 8.47% EER','FastAPI + React'],
     topics:['deepfake-detection','aasist','onnx','fastapi'],
     code:'https://github.com/MohammadThabetHassan/VoiceGuard', paper:'https://doi.org/10.1109/SM69703.2026.11614145'
   },
@@ -397,18 +429,10 @@ const PROJECTS = [
   {
     title:'XAI-IDS', cats:['Security','AI/ML','SOC'], lang:'Python', year:'2026',
     image:'img/projects/xai-ids.webp', alt:'XAI-IDS dashboard showing a DDoS prediction with per-feature explanations and the confidence score',
-    desc:'Explainable intrusion detection across CIC-IDS-2017, UNSW-NB15 and CSE-CIC-IDS-2018 with SHAP and LIME, plus an XAI Confidence Score that tells the analyst which alerts deserve a second look. Live in-browser XGBoost demo, model card, benchmark tables and CI. Basis of manuscript [4].',
-    facts:['16M+ flows · 26 attack classes','F1 up to 0.9964','Cohen’s d 1.0–1.2'],
+    desc:'Explainable intrusion detection across CIC-IDS-2017, UNSW-NB15 and CSE-CIC-IDS-2018 with SHAP and LIME, plus an XAI Confidence Score built from model confidence, SHAP stability and SHAP-LIME agreement; the explanation half of that score is still being validated. Live in-browser XGBoost demo, model card, benchmark tables and CI. Team project; a paper is in preparation.',
+    facts:['16M+ flows · 3 datasets','F1 0.996 · CIC-IDS-2017','F1 ~0.80 · UNSW-NB15'],
     topics:['intrusion-detection','explainable-ai','shap','xgboost'],
     code:'https://github.com/MohammadThabetHassan/xai-ids', demo:'https://mohammadthabethassan.github.io/xai-ids/'
-  },
-  {
-    title:'MIRAGE SOC Lab', cats:['SOC','Security'], lang:'TypeScript', year:'2026',
-    image:'img/projects/mirage-soc-lab.webp', alt:'MIRAGE SOC Lab: controlled detection engineering and SOC training',
-    desc:'Controlled SOC lab for deterministic detection engineering: replayable telemetry, explainable analyst cases mapped to MITRE ATT&CK, and regression tests for the rule catalogue, so a detection change can be proven rather than assumed.',
-    facts:['ATT&CK-mapped cases','Rule regression tests','Playwright end-to-end tests'],
-    topics:['detection-engineering','soc-lab','react','typescript'],
-    code:'https://github.com/MohammadThabetHassan/mirage-soc-lab', demo:'https://mohammadthabethassan.github.io/mirage-soc-lab/', demoLabel:'Overview'
   },
   {
     title:'DiskTrace', cats:['Forensics','Security'], lang:'Rust', year:'2026',
@@ -417,14 +441,6 @@ const PROJECTS = [
     facts:['Local-first · no telemetry','Machine-readable receipts','CodeQL + release CI'],
     topics:['dfir','data-carving','chain-of-custody','egui'],
     code:'https://github.com/MohammadThabetHassan/disktrace'
-  },
-  {
-    title:'TokenAbuse-Azure', cats:['Security','SOC'], lang:'PowerShell', year:'2026',
-    image:'img/projects/tokenabuse-azure.webp', alt:'TokenAbuse-Azure attack chain: device-code phishing, token theft, Graph and SharePoint enumeration, exfiltration',
-    desc:'Walkthrough of an authorised cloud red-team CTF: OAuth device-code phishing, token theft, Microsoft Graph and SharePoint enumeration, and exfiltration, without touching the perimeter. Paired with the KQL hunts and the Conditional Access policy that catch the chain.',
-    facts:['Entra ID / Microsoft 365','Mapped to MITRE ATT&CK','Detections included'],
-    topics:['device-code-phishing','entra-id','kql','microsoft-sentinel'],
-    code:'https://github.com/MohammadThabetHassan/TokenAbuse-Azure', codeLabel:'Write-up'
   },
   {
     title:'Facts Only', cats:['AI/ML','Security'], lang:'JavaScript', year:'2026',
